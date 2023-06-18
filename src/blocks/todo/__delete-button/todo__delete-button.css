@@ -1,0 +1,16 @@
+.todo__delete-button {
+  width: 28px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../../images/todo/todo__delete-button.svg);
+  background-size: contain;
+  transition: .1s linear;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.todo__delete-button:hover {
+  opacity: .8;
+}

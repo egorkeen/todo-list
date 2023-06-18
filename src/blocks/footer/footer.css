@@ -1,0 +1,10 @@
+.footer {
+  width: 1275px;
+  min-height: 211px;
+  margin: 0 auto;
+  padding: 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}

@@ -1,0 +1,10 @@
+.main__todo-container {
+  width: 1280px;
+  min-height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 40px 0 50px;
+}

@@ -1,0 +1,12 @@
+.main__background-image {
+  width: 1109px;
+  height: 1044px;
+  background-image: url(../../../images/main/main__background.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  position: absolute;
+  top: 47px;
+  left: 166px;
+  z-index: -10;
+}

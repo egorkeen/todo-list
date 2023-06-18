@@ -1,0 +1,17 @@
+.todo__done-button {
+  border: none;
+  background-color: transparent;
+  width: 39px;
+  height: 35px;
+  background-image: url(../../../images/todo/todo__done-button.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 0 0 20px;
+  padding: 0;
+  transition: .1s linear;
+  cursor: pointer;
+}
+
+.todo__done-button:hover {
+  opacity: .8;
+}

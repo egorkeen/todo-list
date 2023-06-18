@@ -1,0 +1,5 @@
+.header__container {
+  min-width: 140px;
+  display: flex;
+  gap: 11px;
+}

@@ -1,0 +1,8 @@
+.form__custom-button {
+  width: 48px;
+  height: 43px;
+  background-image: url(../../../images/form/form__custom-button.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

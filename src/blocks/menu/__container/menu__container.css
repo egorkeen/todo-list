@@ -1,0 +1,8 @@
+.menu__container {
+  max-width: 507px;
+  max-height: 322px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+}

@@ -1,0 +1,6 @@
+.header__navigation {
+  min-width: 324px;
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+}

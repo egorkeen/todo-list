@@ -1,0 +1,9 @@
+.possibilities__description {
+  position: relative;
+  width: 432px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  z-index: 20;
+}

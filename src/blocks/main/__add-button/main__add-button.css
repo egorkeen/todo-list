@@ -1,0 +1,18 @@
+.main__add-button {
+  border: none;
+  width: 277px;
+  height: 60px;
+  color: white;
+  background-color: #F34723;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  transition: .1s linear;
+  margin: 0;
+  padding: 0;
+}
+
+.main__add-button:hover {
+  opacity: .8;
+}
