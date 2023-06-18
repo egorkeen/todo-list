@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todo-list/static/css/main.92120d49.css",
+    "main.css": "/todo-list/static/css/main.559e6430.css",
     "main.js": "/todo-list/static/js/main.7f324a44.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
@@ -22,11 +22,11 @@
     "static/media/form__custom-button.svg": "/todo-list/static/media/form__custom-button.3062269aee6dab03ab2c.svg",
     "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.7934cf56fa81fd13fb37.svg",
     "static/media/todo__done-button.svg": "/todo-list/static/media/todo__done-button.c166069fefb521fbf405.svg",
-    "main.92120d49.css.map": "/todo-list/static/css/main.92120d49.css.map",
+    "main.559e6430.css.map": "/todo-list/static/css/main.559e6430.css.map",
     "main.7f324a44.js.map": "/todo-list/static/js/main.7f324a44.js.map"
   },
   "entrypoints": [
-    "static/css/main.92120d49.css",
+    "static/css/main.559e6430.css",
     "static/js/main.7f324a44.js"
   ]
 }
