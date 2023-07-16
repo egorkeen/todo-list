@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/todo-list/static/css/main.559e6430.css",
-    "main.js": "/todo-list/static/js/main.7780412f.js",
+    "main.css": "/todo-list/static/css/main.b1d30ec9.css",
+    "main.js": "/todo-list/static/js/main.2d414ed8.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/possibilities__image-3.png": "/todo-list/static/media/possibilities__image-3.cd5d493a9059337ed75d.png",
@@ -20,13 +20,14 @@
     "static/media/header__logo.svg": "/todo-list/static/media/header__logo.8017293ae79eecf790b17ea6cc09ddb9.svg",
     "static/media/possibilities__background-image.svg": "/todo-list/static/media/possibilities__background-image.f6b67a48f1cb3b00044e.svg",
     "static/media/form__custom-button.svg": "/todo-list/static/media/form__custom-button.3062269aee6dab03ab2c.svg",
+    "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.3afb80300e3e9caf6cfbad147283c873.svg",
     "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.7934cf56fa81fd13fb37.svg",
     "static/media/todo__done-button.svg": "/todo-list/static/media/todo__done-button.c166069fefb521fbf405.svg",
-    "main.559e6430.css.map": "/todo-list/static/css/main.559e6430.css.map",
-    "main.7780412f.js.map": "/todo-list/static/js/main.7780412f.js.map"
+    "main.b1d30ec9.css.map": "/todo-list/static/css/main.b1d30ec9.css.map",
+    "main.2d414ed8.js.map": "/todo-list/static/js/main.2d414ed8.js.map"
   },
   "entrypoints": [
-    "static/css/main.559e6430.css",
-    "static/js/main.7780412f.js"
+    "static/css/main.b1d30ec9.css",
+    "static/js/main.2d414ed8.js"
   ]
 }
