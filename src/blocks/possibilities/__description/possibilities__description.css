@@ -7,3 +7,17 @@
   gap: 28px;
   z-index: 20;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .possibilities__description {
+    width: 341px;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .possibilities__description {
+    width: 280px;
+    gap: 15px;
+  }
+}

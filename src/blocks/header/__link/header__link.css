@@ -2,12 +2,11 @@
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
-  color: #3F3E3E;
+  color: #7E7B7B;
   text-decoration: none;
   transition: .1s linear;
 }
 
 .header__link:hover {
-  cursor: pointer;
   opacity: .8;
 }

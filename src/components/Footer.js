@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import footer__image from '../images/footer/footer__image.svg';
 import footer__logoMail from '../images/footer/footer__logo-mail.svg';
 import footer__logoTelegram from '../images/footer/footer__logo-telegram.svg';
@@ -10,9 +10,9 @@ function Footer(props) {
       <img src={footer__image} className="footer__image" alt="Логотип и название веб-приложения" />
       <div className="footer__container">
         <nav className="footer__navigation">
-          <Link className="footer__link">Главная</Link>
-          <Link className="footer__link">Возможности</Link>
-          <Link className="footer__link">Задачи</Link>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Главная</NavLink>
+        <NavLink to="/possibilities" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Возможности</NavLink>
+        <NavLink to="/main" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Задачи</NavLink>
         </nav>
         <div className="footer__socials">
           <div className="footer__social">

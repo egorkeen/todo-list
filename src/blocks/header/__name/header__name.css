@@ -2,3 +2,10 @@
   width: 111px;
   height: 23px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header__name {
+    width: 87px;
+    height: 18px;
+  }
+}

@@ -18,7 +18,9 @@ body {
 @import url(./blocks/header/__logo/header__logo.css);
 @import url(./blocks/header/__name/header__name.css);
 @import url(./blocks/header/__navigation/header__navigation.css);
+@import url(./blocks/header/__burger-menu/header__burger-menu.css);
 @import url(./blocks/header/__link/header__link.css);
+@import url(./blocks/header/__link/_active/header__link_active.css);
 
 /* menu */
 @import url(./blocks/menu/menu.css);
@@ -36,6 +38,7 @@ body {
 @import url(./blocks/footer/__image/footer__image.css);
 @import url(./blocks/footer/__image-logo/footer__image-logo.css);
 @import url(./blocks/footer/__link/footer__link.css);
+@import url(./blocks/footer/__link/_active/footer__link_active.css);
 @import url(./blocks/footer/__navigation/footer__navigation.css);
 @import url(./blocks/footer/__profession/footer__profession.css);
 @import url(./blocks/footer/__social/footer__social.css);
@@ -48,6 +51,7 @@ body {
 @import url(./blocks/possibilities/__paragraph/possibilities__paragraph.css);
 @import url(./blocks/possibilities/__title/possibilities__title.css);
 @import url(./blocks/possibilities/__background-image/possibilities__background-image.css);
+@import url(./blocks/possibilities/__image/possibilities__image.css);
 
 /* main */
 @import url(./blocks/main/main.css);

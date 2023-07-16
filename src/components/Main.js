@@ -9,7 +9,6 @@ function Main(props) {
       <Header />
 
       <main className="main">
-        <div className="main__background-image" />
         <h2 className="main__title">Список задач</h2>
         <section className="main__todo-container">
         {props.todos.length > 0 ? (

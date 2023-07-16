@@ -2,7 +2,7 @@
   border: none;
   background-color: transparent;
   width: 39px;
-  height: 35px;
+  height: 36px;
   background-image: url(../../../images/todo/todo__done-button.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -14,4 +14,17 @@
 
 .todo__done-button:hover {
   opacity: .8;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .todo__done-button {
+    width: 36px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .todo__done-button {
+    width: 25px;
+    height: 25px;
+  }
 }

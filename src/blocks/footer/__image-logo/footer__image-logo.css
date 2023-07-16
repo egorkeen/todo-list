@@ -2,3 +2,10 @@
   width: 33px;
   height: 33px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__image-logo {
+    width: 20px;
+    height: 20px;
+  }
+}

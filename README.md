@@ -32,3 +32,5 @@ Git-репозиторий - https://github.com/egorkeen/todo-list.git/
 Ссылка на GitHub Pages - https://egorkeen.github.io/todo-list/
 
 Статус - в доработке ⌛
+
+Ссылка на GitHub Pages - ...
