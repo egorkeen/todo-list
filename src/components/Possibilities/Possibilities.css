@@ -1,0 +1,152 @@
+.possibilities {
+  margin: 121px auto 130px;
+  padding: 0;
+}
+
+.possibilities__container {
+  width: 1168px;
+  min-height: 613px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.possibilities__description {
+  position: relative;
+  width: 432px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  z-index: 20;
+}
+
+.possibilities__paragraph {
+  width: 432px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.possibilities__title {
+  width: 432px;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.possibilities__background-image {
+  width: 385px;
+  height: 354px;
+  background-image: url(../../images/possibilities/possibilities__background-image.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  position: absolute;
+  top: -60px;
+  left: 35px;
+}
+
+.possibilities__image {
+  width: 625px;
+  height: 613px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .possibilities {
+    margin: 100px auto 40px;
+  }
+
+  .possibilities__container {
+    width: 645px;
+    min-height: 259px;
+    margin-bottom: 59px;
+  }
+
+  .possibilities__container:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .possibilities__description {
+    width: 341px;
+    gap: 15px;
+  }
+
+  .possibilities__paragraph {
+    width: 311px;
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .possibilities__title {
+    width: 341px;
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .possibilities__background-image {
+    top: -25px;
+    left: 15px;
+    width: 258px;
+    height: 237px;
+  }
+
+  .possibilities__image {
+    width: 280px;
+    height: 275px
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .possibilities {
+    margin: 90px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .possibilities__container {
+    width: 258px;
+    min-height: fit-content;
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .possibilities__description {
+    width: 280px;
+    gap: 15px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .possibilities__paragraph {
+    width: 280px;
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .possibilities__title {
+    width: 269px;
+    font-size: 32px;
+    line-height: normal;
+  }
+
+  .possibilities__background-image {
+    width: 258px;
+    height: 237px;
+    top: -30px;
+    left: 5px;
+  }
+
+  .possibilities__image {
+    width: 264px;
+    height: 259px;
+    margin-top: 50px;
+  }
+}

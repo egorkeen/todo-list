@@ -1,0 +1,173 @@
+.footer {
+  width: 1275px;
+  min-height: 211px;
+  margin: 0 auto;
+  padding: 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer__container {
+  width: 1275px;
+  min-height: 138px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__contact {
+  color: #F34723;
+}
+
+.footer__date {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__image {
+  width: 144px;
+  height: 24px;
+}
+
+.footer__image-logo {
+  width: 33px;
+  height: 33px;
+}
+
+.footer__link {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #7E7B7B;
+  text-decoration: none;
+  transition: .1s linear;
+}
+
+.footer__link:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.footer__link_active {
+  font-size: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #3F3E3E;
+  text-decoration: none;
+  transition: .1s linear;
+  cursor: default;
+}
+
+.footer__navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__profession {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__social {
+  width: 479px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__socials {
+  width: 479px;
+  height: 109px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .footer {
+    width: 768px;
+    padding-top: 50px;
+  }
+
+  .footer__container {
+    width: 640px;
+    flex-wrap: wrap;
+  }
+
+  .footer__link {
+    line-height: normal;
+  }
+
+  .footer__profession {
+    line-height: normal;
+  }
+
+  .footer__social {
+    width: 261px;
+  }
+
+  .footer__socials {
+    height: fit-content;
+    width: 261px;
+    gap: 38px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    width: 280px;
+    padding-bottom: 25px;
+  }
+
+  .footer__container {
+    width: 277px;
+    flex-wrap: wrap;
+  }
+
+  .footer__date {
+    font-size: 15px;
+    line-height: normal;
+    margin: 20px auto 0;
+  }
+
+  .footer__image {
+    width: 105px;
+    height: 17px;
+  }
+
+    .footer__image-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__link {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .footer__link_active {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .footer__profession {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  .footer__social {
+    width: 161px;
+  }
+
+  .footer__socials {
+    width: 159px;
+    gap: 22px;
+  }
+}

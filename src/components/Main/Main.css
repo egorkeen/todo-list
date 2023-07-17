@@ -1,0 +1,98 @@
+.main {
+  margin: 77px auto 80px;
+  padding: 0;
+  width: 1280px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__add-button {
+  border: none;
+  width: 277px;
+  height: 60px;
+  color: white;
+  background-color: #F34723;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  transition: .1s linear;
+  margin: 0 0 50px;
+  padding: 0;
+}
+
+.main__add-button:hover {
+  opacity: .8;
+}
+
+.main__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  margin: 0;
+  padding: 0;
+}
+
+.main__todo-container {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 211px 0 77px;
+}
+
+.main__no-tasks {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 80px;
+  color: #9E9A9A;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .main {
+    width: 768px;
+  }
+
+  .main__todo-container {
+    width: 768px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main {
+    width: 281px;
+    margin-bottom: 55px;
+  }
+
+  .main__add-button {
+    width: 203px;
+    height: 50px;
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .main__title {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .main__todo-container {
+    width: 281px;
+    margin-top: 25px;
+  }
+
+  .main__no-tasks {
+    width: 281px;
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
