@@ -42,7 +42,7 @@
   justify-content: center;
   align-items: center;
   gap: 35px;
-  margin: 211px 0 77px;
+  margin: 100px 0 77px;
 }
 
 .main__no-tasks {
@@ -63,7 +63,6 @@
 
   .main__todo-container {
     width: 768px;
-    margin-top: 100px;
   }
 }
 
@@ -88,6 +87,7 @@
   .main__todo-container {
     width: 281px;
     margin-top: 25px;
+    gap: 20px;
   }
 
   .main__no-tasks {
