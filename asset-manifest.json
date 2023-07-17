@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/todo-list/static/css/main.80f62d45.css",
-    "main.js": "/todo-list/static/js/main.47d91cd1.js",
+    "main.css": "/todo-list/static/css/main.6d07967e.css",
+    "main.js": "/todo-list/static/js/main.e7981a48.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/possibilities__image-3.png": "/todo-list/static/media/possibilities__image-3.cd5d493a9059337ed75d.png",
-    "static/media/main__background.png": "/todo-list/static/media/main__background.eac0cd5b8795a0694b95.png",
     "static/media/possibilities__image-1.png": "/todo-list/static/media/possibilities__image-1.b48d4f2e378dedbff101.png",
     "static/media/menu__image.png": "/todo-list/static/media/menu__image.0f6e8554e7a7a55182db.png",
     "static/media/Gilroy-Regular.woff": "/todo-list/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
@@ -19,15 +18,16 @@
     "index.html": "/todo-list/index.html",
     "static/media/header__logo.svg": "/todo-list/static/media/header__logo.3ecdea714d2beb1b72f216916651b4b9.svg",
     "static/media/possibilities__background-image.svg": "/todo-list/static/media/possibilities__background-image.23f1ddb764c99d753858.svg",
+    "static/media/navigation-popup__close-button.svg": "/todo-list/static/media/navigation-popup__close-button.71614cf0d0c116dc05f2.svg",
     "static/media/form__custom-button.svg": "/todo-list/static/media/form__custom-button.314f8193020833b1fa19.svg",
     "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.37e1702cf1787f8880c12bd02b42d307.svg",
     "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.d31ab63cfff895d03f53.svg",
     "static/media/todo__done-button.svg": "/todo-list/static/media/todo__done-button.6cc50f05b298fbc7da92.svg",
-    "main.80f62d45.css.map": "/todo-list/static/css/main.80f62d45.css.map",
-    "main.47d91cd1.js.map": "/todo-list/static/js/main.47d91cd1.js.map"
+    "main.6d07967e.css.map": "/todo-list/static/css/main.6d07967e.css.map",
+    "main.e7981a48.js.map": "/todo-list/static/js/main.e7981a48.js.map"
   },
   "entrypoints": [
-    "static/css/main.80f62d45.css",
-    "static/js/main.47d91cd1.js"
+    "static/css/main.6d07967e.css",
+    "static/js/main.e7981a48.js"
   ]
 }
