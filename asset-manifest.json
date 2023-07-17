@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/todo-list/static/css/main.b1d30ec9.css",
-    "main.js": "/todo-list/static/js/main.2d414ed8.js",
+    "main.css": "/todo-list/static/css/main.80f62d45.css",
+    "main.js": "/todo-list/static/js/main.47d91cd1.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/possibilities__image-3.png": "/todo-list/static/media/possibilities__image-3.cd5d493a9059337ed75d.png",
@@ -11,23 +11,23 @@
     "static/media/Gilroy-Regular.woff": "/todo-list/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
     "static/media/possibilities__image-2.png": "/todo-list/static/media/possibilities__image-2.f35b18baab419c18649a.png",
     "static/media/Gilroy-Regular.woff2": "/todo-list/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
-    "static/media/footer__image.svg": "/todo-list/static/media/footer__image.0e1a1bdef8022f3e984cf874b57586c6.svg",
-    "static/media/header__name.svg": "/todo-list/static/media/header__name.d9874dc642301121d42be6591e540e80.svg",
-    "static/media/footer__logo-mail.svg": "/todo-list/static/media/footer__logo-mail.6bcb927930d668feb6d35c1df505a58b.svg",
-    "static/media/footer__logo-telegram.svg": "/todo-list/static/media/footer__logo-telegram.1ee313c196d375f25687e8cf214722d0.svg",
-    "static/media/todo__done-button_active.svg": "/todo-list/static/media/todo__done-button_active.388bbad08d1e024ebb81.svg",
+    "static/media/footer__image.svg": "/todo-list/static/media/footer__image.cc496addb0d74c26d2b19b2a6f9fe698.svg",
+    "static/media/header__name.svg": "/todo-list/static/media/header__name.8a75826c42c4c6e9ee68869055b66f1d.svg",
+    "static/media/footer__logo-mail.svg": "/todo-list/static/media/footer__logo-mail.e3715c52e2f87635b1c4768e4b927571.svg",
+    "static/media/footer__logo-telegram.svg": "/todo-list/static/media/footer__logo-telegram.825d584120de874714e7ab3d530f8a6b.svg",
+    "static/media/todo__done-button_active.svg": "/todo-list/static/media/todo__done-button_active.9810edd6b142b1dad17e.svg",
     "index.html": "/todo-list/index.html",
-    "static/media/header__logo.svg": "/todo-list/static/media/header__logo.8017293ae79eecf790b17ea6cc09ddb9.svg",
-    "static/media/possibilities__background-image.svg": "/todo-list/static/media/possibilities__background-image.f6b67a48f1cb3b00044e.svg",
-    "static/media/form__custom-button.svg": "/todo-list/static/media/form__custom-button.3062269aee6dab03ab2c.svg",
-    "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.3afb80300e3e9caf6cfbad147283c873.svg",
-    "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.7934cf56fa81fd13fb37.svg",
-    "static/media/todo__done-button.svg": "/todo-list/static/media/todo__done-button.c166069fefb521fbf405.svg",
-    "main.b1d30ec9.css.map": "/todo-list/static/css/main.b1d30ec9.css.map",
-    "main.2d414ed8.js.map": "/todo-list/static/js/main.2d414ed8.js.map"
+    "static/media/header__logo.svg": "/todo-list/static/media/header__logo.3ecdea714d2beb1b72f216916651b4b9.svg",
+    "static/media/possibilities__background-image.svg": "/todo-list/static/media/possibilities__background-image.23f1ddb764c99d753858.svg",
+    "static/media/form__custom-button.svg": "/todo-list/static/media/form__custom-button.314f8193020833b1fa19.svg",
+    "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.37e1702cf1787f8880c12bd02b42d307.svg",
+    "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.d31ab63cfff895d03f53.svg",
+    "static/media/todo__done-button.svg": "/todo-list/static/media/todo__done-button.6cc50f05b298fbc7da92.svg",
+    "main.80f62d45.css.map": "/todo-list/static/css/main.80f62d45.css.map",
+    "main.47d91cd1.js.map": "/todo-list/static/js/main.47d91cd1.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1d30ec9.css",
-    "static/js/main.2d414ed8.js"
+    "static/css/main.80f62d45.css",
+    "static/js/main.47d91cd1.js"
   ]
 }
