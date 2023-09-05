@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../index.css";
 import Menu from "../Menu/Menu";
 import Possibilities from "../Possibilities/Possibilities";
@@ -20,13 +20,23 @@ function App() {
 
   function handleTodoDelete(todo) {
     const updatedTodos = todos.slice().filter((t) => t !== todo);
+    localStorage.setItem('todos', JSON.stringify(updatedTodos));
     setTodos(updatedTodos);
   }
 
   function onAddSubmit(todo) {
-    setTodos([todo, ...todos]);
+    const newTodos = [todo, ...todos];
+    setTodos(newTodos);
+    localStorage.setItem('todos', JSON.stringify(newTodos));
     closeAddPopup();
   }
+
+  useEffect(() => {
+    const localTodos = JSON.parse(localStorage.getItem('todos'));
+    if (localTodos) {
+      setTodos(localTodos);
+    }
+  }, []);
 
   return (
     <>
