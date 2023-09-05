@@ -1,21 +1,27 @@
 .todo {
-  width: 1280px;
-  height: 141px;
+  width: 426px;
+  height: 533px;
   border: 2px solid #F8917B;
   border-radius: 15px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 80px 40px;
+}
+
+.todo__container {
+  margin: 20px 0 0 35px;
+  border: 1px solid red;
 }
 
 .todo__task {
-  width: 1100px;
+  max-width: 250px;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 36px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0 35px;
+  margin: 25px 0 0 10px;
   transition: .1s linear;
 }
 
@@ -24,15 +30,37 @@
   color: #9E9A9A;
 }
 
+.todo__deadline {
+  font-size: 20px;
+  font-weight: 400;
+  color: gray;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+
+.todo__description {
+  height: 277px;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 0 10px;
+  padding: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
 .todo__done-button {
-  border: none;
-  background-color: transparent;
-  width: 39px;
-  height: 36px;
-  background-image: url(../../images/todo/todo__done-button.svg);
+  width: 250px;
+  height: 70px;
+  border-radius: 10px;
+  border: 2px solid #F34723;
+  background-color: #F34723;
+  color: #fff;
+  font-size: 25px;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 10px;
   padding: 0;
   transition: .1s linear;
   cursor: pointer;
@@ -43,19 +71,46 @@
 }
 
 .todo__done-button_active {
+  border-radius: 10px;
+  border: 2px solid #ffb3a2;
+  background-color: #ffb3a2;
   background-image: url(../../images/todo/todo__done-button_active.svg);
+  background-repeat: no-repeat;
+  background-size: 39px 31px;
+  background-position: center;
+}
+
+.todo__edit-button {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: #fe7e64;
+  background-image: url(../../images/todo/todo__edit-button.svg);
+  background-repeat: no-repeat;
+  background-size: 31px 31px;
+  background-position: center;
+  border-radius: 50px;
+  transition: .1s linear;
+  cursor: pointer;
+}
+
+.todo__edit-button:hover {
+  opacity: .8;
 }
 
 .todo__delete-button {
-  width: 28px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: transparent;
   background-image: url(../../images/todo/todo__delete-button.svg);
   background-repeat: no-repeat;
   background-size: contain;
   transition: .1s linear;
-  margin: 0;
+  margin: 25px 0 0 15px;
   padding: 0;
   cursor: pointer;
 }

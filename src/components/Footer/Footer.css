@@ -39,17 +39,38 @@
 }
 
 .footer__link {
+  width: fit-content;
+  position: relative;
+  display: block;
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
   color: #7E7B7B;
   text-decoration: none;
-  transition: .1s linear;
+  transition: .3s linear;
+}
+
+.footer__link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  transition: transform .3s;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: #F34723;
 }
 
 .footer__link:hover {
   cursor: pointer;
-  opacity: .8;
+  color: black;
+}
+
+.footer__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .footer__link_active {

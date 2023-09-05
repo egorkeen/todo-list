@@ -37,10 +37,8 @@
 
 .main__todo-container {
   width: 1280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 35px;
   margin: 100px 0 77px;
 }
