@@ -26,6 +26,10 @@ function App() {
       const updatedTodos = todos.slice().filter((t) => t !== todo);
       localStorage.setItem('todos', JSON.stringify(updatedTodos));
       setTodos(updatedTodos);
+    } else if (todo.isDone) {
+      const updatedDoneTodos = doneTodos.slice().filter((t) => t !== todo);
+      localStorage.setItem('doneTodos', JSON.stringify(updatedDoneTodos));
+      setDoneTodos(updatedDoneTodos);
     }
   }
 
