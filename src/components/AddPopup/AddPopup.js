@@ -108,6 +108,7 @@ function AddPopup(props) {
           placeholder="Описание"
           className="form__description-input"
           minLength={4}
+          maxLength={370}
           required
           onChange={handleDescriptionChange}
           value={description}

@@ -39,9 +39,17 @@
   transition: .1s linear;
 }
 
+.todo__task:hover {
+  cursor: pointer;
+}
+
 .todo__task_done {
   text-decoration: line-through;
   color: #9E9A9A;
+}
+
+.todo__task_done:hover {
+  cursor: pointer;
 }
 
 .todo__deadline {

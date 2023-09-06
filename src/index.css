@@ -24,8 +24,10 @@ body {
 /* possibilities */
 @import url(./components/Possibilities/Possibilities.css);
 
-/* main */
+/* todos */
 @import url(./components/Todos/Todos.css);
+
+@import url(./components/TodoPopup/TodoPopup.css);
 
 /* popup */
 .popup {

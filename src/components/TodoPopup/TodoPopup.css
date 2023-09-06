@@ -1,0 +1,38 @@
+.todo-popup__container {
+  width: 500px;
+  height: 520px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-popup__task {
+  max-width: 250px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 25px 0 10px;
+  transition: .1s linear;
+}
+
+.todo-popup__deadline {
+  font-size: 20px;
+  font-weight: 400;
+  color: gray;
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+.todo-popup__description {
+  max-width: 400px;
+  height: 270px;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}

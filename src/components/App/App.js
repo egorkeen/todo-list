@@ -6,19 +6,24 @@ import Possibilities from "../Possibilities/Possibilities";
 import Todos from "../Todos/Todos";
 import DoneTodos from "../DoneTodos/DoneTodos";
 import AddPopup from "../AddPopup/AddPopup";
+import TodoPopup from "../TodoPopup/TodoPopup";
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [doneTodos, setDoneTodos] = useState([]);
+  const [selectedTodo, setSelectedTodo] = useState({});
   const [isAddPopupOpen, setAddPopupOpen] = useState(false);
   const [isEditPopupOpen, setEditPopupOpen] = useState(false);
+  const [isTodoPopupOpen, setTodoPopupOpen] = useState(false);
 
   function openAddPopup() {
     setAddPopupOpen(true);
   }
 
-  function closeAddPopup() {
+  function closeAllPopups() {
     setAddPopupOpen(false);
+    setEditPopupOpen(false);
+    setTodoPopupOpen(false);
   }
 
   function handleTodoDelete(todo) {
@@ -58,11 +63,16 @@ function App() {
 
   }
 
+  function handleTodoClick (todo) {
+    setTodoPopupOpen(true);
+    setSelectedTodo(todo);
+  }
+
   function onAddSubmit(todo) {
     const newTodos = [todo, ...todos];
     setTodos(newTodos);
     localStorage.setItem('todos', JSON.stringify(newTodos));
-    closeAddPopup();
+    closeAllPopups();
   }
 
   useEffect(() => {
@@ -88,6 +98,7 @@ function App() {
             <Todos
               todos={todos}
               doneTodos={doneTodos}
+              onTodoClick={handleTodoClick}
               onAddButtonClick={openAddPopup}
               onDeleteButtonClick={handleTodoDelete}
               onDoneButtonClick={handleDoneClick}
@@ -102,6 +113,7 @@ function App() {
               doneTodos={doneTodos}
               onDeleteButtonClick={handleTodoDelete}
               onDoneButtonClick={handleDoneClick}
+              onTodoClick={handleTodoClick}
             />
           }
         />
@@ -110,7 +122,13 @@ function App() {
       <AddPopup
         isOpen={isAddPopupOpen}
         onSubmit={onAddSubmit}
-        onClose={closeAddPopup}
+        onClose={closeAllPopups}
+      />
+
+      <TodoPopup
+        isOpen={isTodoPopupOpen}
+        onClose={closeAllPopups}
+        selectedTodo={selectedTodo}
       />
     </>
   );

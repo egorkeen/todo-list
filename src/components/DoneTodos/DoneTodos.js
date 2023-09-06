@@ -18,6 +18,7 @@ function DoneTodos (props) {
                   key={todo.id}
                   onDeleteButtonClick={props.onDeleteButtonClick}
                   onDoneButtonClick={props.onDoneButtonClick}
+                  onTodoClick={props.onTodoClick}
                 />
               ))
             ) : (
