@@ -39,7 +39,7 @@
   width: 1280px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 35px;
+  gap: 20px;
   margin: 100px 0 77px;
 }
 

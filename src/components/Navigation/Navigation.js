@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import NavigationPopup from "../NavigationPopup/NavigationPopup";
 import header__burger from '../../images/header/header__burger-image.svg';
 
@@ -19,7 +19,8 @@ function Navigation (props) {
       <nav className="header__navigation">
         <NavLink to="/" className={({ isActive }) => isActive ? 'header__link_active' : 'header__link'}>Главная</NavLink>
         <NavLink to="/possibilities" className={({ isActive }) => isActive ? 'header__link_active' : 'header__link'}>Возможности</NavLink>
-        <NavLink to="/main" className={({ isActive }) => isActive ? 'header__link_active' : 'header__link'}>Задачи</NavLink>
+        <NavLink to="/todos" className={({ isActive }) => isActive ? 'header__link_active' : 'header__link'}>Задачи</NavLink>
+        <NavLink to="/done-todos" className={({ isActive }) => isActive ? 'header__link_active' : 'header__link'}>Выполненнные задачи</NavLink>
       </nav>
 
       <nav onClick={openBurgerMenu} className="header__burger-menu">

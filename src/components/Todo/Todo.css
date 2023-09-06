@@ -1,22 +1,22 @@
 .todo {
-  width: 426px;
+  width: 400px;
   height: 533px;
   border: 2px solid #F8917B;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 320px 1fr;
   grid-template-rows: 80px 40px;
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .todo_done {
-  width: 426px;
+  width: 400px;
   height: 533px;
   border: 2px solid #F8917B;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 320px 1fr;
   grid-template-rows: 80px 40px;
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -142,7 +142,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   transition: .1s linear;
-  margin: 25px 0 0 15px;
+  margin: 25px 0 0 25px;
   padding: 0;
   cursor: pointer;
 }

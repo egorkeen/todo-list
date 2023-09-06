@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Todo from "../Todo/Todo";
 
-function Main(props) {
+function Todos(props) {
   return (
     <>
       <Header />
@@ -18,6 +18,7 @@ function Main(props) {
                 todo={todo}
                 key={todo.id}
                 onDeleteButtonClick={props.onDeleteButtonClick}
+                onDoneButtonClick={props.onDoneButtonClick}
               />
             ))
           ) : (
@@ -42,4 +43,4 @@ function Main(props) {
   );
 }
 
-export default Main;
+export default Todos;

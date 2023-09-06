@@ -12,7 +12,8 @@ function Footer(props) {
         <nav className="footer__navigation">
         <NavLink to="/" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Главная</NavLink>
         <NavLink to="/possibilities" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Возможности</NavLink>
-        <NavLink to="/main" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Задачи</NavLink>
+        <NavLink to="/todos" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Задачи</NavLink>
+        <NavLink to="/done-todos" className={({ isActive }) => isActive ? 'footer__link_active' : 'footer__link'}>Выполненные задачи</NavLink>
         </nav>
         <div className="footer__socials">
           <div className="footer__social">

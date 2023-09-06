@@ -25,7 +25,7 @@ body {
 @import url(./components/Possibilities/Possibilities.css);
 
 /* main */
-@import url(./components/Main/Main.css);
+@import url(./components/Todos/Todos.css);
 
 /* popup */
 .popup {

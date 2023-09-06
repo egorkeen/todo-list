@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import "../../index.css";
 import Menu from "../Menu/Menu";
 import Possibilities from "../Possibilities/Possibilities";
-import Main from "../Main/Main";
+import Todos from "../Todos/Todos";
+import DoneTodos from "../DoneTodos/DoneTodos";
 import AddPopup from "../AddPopup/AddPopup";
 
 function App() {
@@ -21,16 +22,31 @@ function App() {
   }
 
   function handleTodoDelete(todo) {
-    const updatedTodos = todos.slice().filter((t) => t !== todo);
-    localStorage.setItem('todos', JSON.stringify(updatedTodos));
-    setTodos(updatedTodos);
+    if (!todo.isDone) {
+      const updatedTodos = todos.slice().filter((t) => t !== todo);
+      localStorage.setItem('todos', JSON.stringify(updatedTodos));
+      setTodos(updatedTodos);
+    }
   }
 
   function handleDoneClick(todo) {
-    if (todo.isDone) {
-
-    } else if (!todo.isDone) {
-
+    console.log(todo)
+    if (!todo.isDone) {
+      todo.isDone = true;
+      const updatedTodos = todos.slice().filter((t) => t !== todo);
+      localStorage.setItem('todos', JSON.stringify(updatedTodos));
+      setTodos(updatedTodos);
+      const updatedDoneTodos = [todo, ...doneTodos];
+      setDoneTodos(updatedDoneTodos);
+      localStorage.setItem('doneTodos', JSON.stringify(updatedDoneTodos));
+    } else {
+      todo.isDone = false;
+      const updatedDoneTodos = doneTodos.slice().filter((t) => t !== todo);
+      localStorage.setItem('doneTodos', JSON.stringify(updatedDoneTodos));
+      setDoneTodos(updatedDoneTodos);
+      const updatedTodos = [todo, ...todos];
+      setTodos(updatedTodos);
+      localStorage.setItem('todos', JSON.stringify(updatedTodos));
     }
   }
 
@@ -47,8 +63,13 @@ function App() {
 
   useEffect(() => {
     const localTodos = JSON.parse(localStorage.getItem('todos'));
+    const localDoneTodos = JSON.parse(localStorage.getItem('doneTodos'));
     if (localTodos) {
       setTodos(localTodos);
+    }
+
+    if (localDoneTodos) {
+      setDoneTodos(localDoneTodos);
     }
   }, []);
 
@@ -58,14 +79,25 @@ function App() {
         <Route path="/" element={<Menu />} />
         <Route path="/possibilities" element={<Possibilities />} />
         <Route
-          path="/main"
+          path="/todos"
           element={
-            <Main
+            <Todos
               todos={todos}
+              doneTodos={doneTodos}
               onAddButtonClick={openAddPopup}
               onDeleteButtonClick={handleTodoDelete}
               onDoneButtonClick={handleDoneClick}
               onEditButtonClick={handleEditClick}
+            />
+          }
+        />
+        <Route
+          path="/done-todos"
+          element={
+            <DoneTodos 
+              doneTodos={doneTodos}
+              onDeleteButtonClick={handleTodoDelete}
+              onDoneButtonClick={handleDoneClick}
             />
           }
         />

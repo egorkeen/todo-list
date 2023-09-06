@@ -37,7 +37,8 @@ function NavigationPopup (props) {
           <nav className="navigation-popup__container">
             <NavLink onClick={props.onClose} to="/" className={({ isActive }) => isActive ? 'navigation-popup__button_active' : 'navigation-popup__button'}>Главная</NavLink>
             <NavLink onClick={props.onClose} to="/possibilities" className={({ isActive }) => isActive ? 'navigation-popup__button_active' : 'navigation-popup__button'}>Возможности</NavLink>
-            <NavLink onClick={props.onClose} to="/main" className={({ isActive }) => isActive ? 'navigation-popup__button_active' : 'navigation-popup__button'}>Задачи</NavLink>
+            <NavLink onClick={props.onClose} to="/todos" className={({ isActive }) => isActive ? 'navigation-popup__button_active' : 'navigation-popup__button'}>Задачи</NavLink>
+            <NavLink onClick={props.onClose} to="/done-todos" className={({ isActive }) => isActive ? 'navigation-popup__button_active' : 'navigation-popup__button'}>Выполненнные задачи</NavLink>
           </nav>
       </div>
     </div>

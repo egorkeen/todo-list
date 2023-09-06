@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 
-function Todo({ todo, onDeleteButtonClick }) {
-  const [isDone, setDone] = useState(false);
+function Todo({ todo, onDeleteButtonClick, onDoneButtonClick }) {
+  const [isDone, setDone] = useState(todo.isDone);
   
   function handleDoneClick() {
-    todo.isDone = !isDone;
-    if (isDone) {
-      setDone(false);
-    } else {
-      setDone(true);
-    }
+    onDoneButtonClick(todo);
   }
 
   function handleEditClick() {
-    // some function
+
   }
 
   function handleDeleteClick() {

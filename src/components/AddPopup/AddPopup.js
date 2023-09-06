@@ -81,7 +81,8 @@ function AddPopup(props) {
         task: task,
         date: formatDate(new Date(selectedDate)),
         time: selectedTime,
-        description: description
+        description: description,
+        isDone: false
       }
     );
   };
