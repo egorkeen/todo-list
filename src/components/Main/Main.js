@@ -17,17 +17,19 @@ function Main(props) {
               <Todo
                 todo={todo}
                 key={todo.id}
-                task={todo.task}
                 onDeleteButtonClick={props.onDeleteButtonClick}
               />
             ))
           ) : (
             // если ничего нет, то будет надпись ниже
-            <p className="main__no-tasks">
-              У вас пока нет задач {":("}
-              <br />
-              Но мы знаем, как это исправить!
-            </p>
+            <>
+              <p/>
+              <p className="main__no-tasks">
+                У вас пока нет задач {":("}
+                <br />
+                Но мы знаем, как это исправить!
+              </p>
+            </>
           )}
         </section>
         <button className="main__add-button" onClick={props.onAddButtonClick}>

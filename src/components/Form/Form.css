@@ -1,47 +1,68 @@
 .form {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 1280px;
-  height: 141px;
+  width: 600px;
+  height: 550px;
   border-radius: 15px;
   background-color: white;
-  margin: 500px auto 0;
+  margin: auto;
+}
+
+.form__title {
+  font-size: 36px;
+  color: black;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.form__input-title {
+  margin: 0 0 10px 0;
+  padding: 0;
 }
 
 .form__input {
-  width: 1100px;
+  width: 400px;
   height: 36px;
   border-radius: 10px;
-  border: none;
+  border: 2px solid gray;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  margin: 0 0 0 40px;
-  padding: 0;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 10px;
+}
+
+.form__description-input {
+  width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 30px 0;
+  padding: 10px 0 0 10px;
 }
 
 .form__submit-button {
-  border: none;
-  background-color: transparent;
+  width: 230px;
+  height: 60px;
+  border: 2px solid #F34723;
+  background-color: #F34723;
+  color: white;
+  font-size: 24px;
+  line-height: 36px;
+  border-radius: 10px;
   padding: 0;
-  margin: 0 0 0 40px;
+  margin: 50px 0 0;
   cursor: pointer;
-  width: 48px;
-  height: 43px;
   transition: .1s linear;
 }
 
 .form__submit-button:hover {
   opacity: .8;
-}
-
-.form__custom-button {
-  width: 48px;
-  height: 43px;
-  background-image: url(../../images/form/form__custom-button.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {

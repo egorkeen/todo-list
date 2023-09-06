@@ -8,7 +8,9 @@ import AddPopup from "../AddPopup/AddPopup";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [doneTodos, setDoneTodos] = useState([]);
   const [isAddPopupOpen, setAddPopupOpen] = useState(false);
+  const [isEditPopupOpen, setEditPopupOpen] = useState(false);
 
   function openAddPopup() {
     setAddPopupOpen(true);
@@ -22,6 +24,18 @@ function App() {
     const updatedTodos = todos.slice().filter((t) => t !== todo);
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
     setTodos(updatedTodos);
+  }
+
+  function handleDoneClick(todo) {
+    if (todo.isDone) {
+
+    } else if (!todo.isDone) {
+
+    }
+  }
+
+  function handleEditClick(todo) {
+
   }
 
   function onAddSubmit(todo) {
@@ -50,6 +64,8 @@ function App() {
               todos={todos}
               onAddButtonClick={openAddPopup}
               onDeleteButtonClick={handleTodoDelete}
+              onDoneButtonClick={handleDoneClick}
+              onEditButtonClick={handleEditClick}
             />
           }
         />
