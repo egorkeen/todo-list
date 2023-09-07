@@ -161,38 +161,100 @@
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .todo {
-    width: 647px;
+    width: 370px;
+    grid-template-columns: 258px 1fr;
+  }
+
+  .todo_done {
+    width: 370px;
+    grid-template-columns: 258px 1fr;
+  }
+
+  .todo__task_done {
+    width: 260px;
   }
 
   .todo__task {
-    width: 469px;
-    margin-right: 35px;
+    width: 260px;
+  }
+
+  .todo__delete-button {
+    margin-top: 20px;
+    margin-left: 55px;
   }
 
   .todo__done-button {
-    width: 36px;
+    width: 250px;
+  }
+
+  .todo__done-button_active {
+    width: 250px;
+  }
+
+  .todo__edit-button {
+    margin-left: 25px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .todo {
-    width: 281px;
-    height: 75px;
+    width: 280px;
+    height: 420px;
+    grid-template-columns: 192px 1fr;
+  }
+
+  .todo_done {
+    width: 280px;
+    height: 420px;
+    grid-template-columns: 192px 1fr;
   }
 
   .todo__task {
     width: 165px;
-    margin: 0 30px 0 10px;
-    font-size: 20px;
+    margin: 15px 30px 0 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .todo__task_done {
+    width: 165px;
+    margin: 15px 30px 0 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .todo__description {
+    height: 200px;
+  }
+
+  .todo__description_done {
+    height: 200px;
   }
 
   .todo__done-button {
-    width: 20px;
-    height: 20px;
+    width: 165px;
+    height: 55px;
+    font-size: 20px;
+  }
+
+  .todo__done-button_active {
+    width: 165px;
+    height: 55px;
+    font-size: 20px;
+  }
+
+  .todo__edit-button {
+    width: 50px;
+    height: 50px;
+    background-size: 25px 25px;
+    margin-left: 20px;
+    margin-top: 2px;
   }
   
   .todo__delete-button {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
+    margin-top: 16px;
+    margin-left: 38px;
   }
 }

@@ -61,6 +61,7 @@
 
   .main__todo-container {
     width: 768px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -86,6 +87,7 @@
     width: 281px;
     margin-top: 25px;
     gap: 20px;
+    grid-template-columns: 1fr;
   }
 
   .main__no-tasks {

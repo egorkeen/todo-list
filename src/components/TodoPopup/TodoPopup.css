@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 
 .todo-popup__task {
@@ -33,4 +34,20 @@
   font-weight: 400;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .todo-popup__container {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .todo-popup__container {
+    width: 280px;
+  }
+
+  .todo-popup__deadline {
+    font-size: 18px;
+  }
 }
