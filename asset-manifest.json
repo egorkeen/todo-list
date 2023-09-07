@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/todo-list/static/css/main.d19016d8.css",
-    "main.js": "/todo-list/static/js/main.e7981a48.js",
+    "main.css": "/todo-list/static/css/main.92df8522.css",
+    "main.js": "/todo-list/static/js/main.e4e2ed94.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/possibilities__image-3.png": "/todo-list/static/media/possibilities__image-3.cd5d493a9059337ed75d.png",
@@ -14,20 +14,19 @@
     "static/media/header__name.svg": "/todo-list/static/media/header__name.8a75826c42c4c6e9ee68869055b66f1d.svg",
     "static/media/footer__logo-mail.svg": "/todo-list/static/media/footer__logo-mail.e3715c52e2f87635b1c4768e4b927571.svg",
     "static/media/footer__logo-telegram.svg": "/todo-list/static/media/footer__logo-telegram.825d584120de874714e7ab3d530f8a6b.svg",
-    "static/media/todo__done-button_active.svg": "/todo-list/static/media/todo__done-button_active.9810edd6b142b1dad17e.svg",
+    "static/media/todo__done-button_active.svg": "/todo-list/static/media/todo__done-button_active.6bfb7944ce738c026b8b.svg",
     "index.html": "/todo-list/index.html",
     "static/media/header__logo.svg": "/todo-list/static/media/header__logo.3ecdea714d2beb1b72f216916651b4b9.svg",
     "static/media/possibilities__background-image.svg": "/todo-list/static/media/possibilities__background-image.23f1ddb764c99d753858.svg",
+    "static/media/todo__edit-button.svg": "/todo-list/static/media/todo__edit-button.beabcd3bcfda34edf6d0.svg",
     "static/media/navigation-popup__close-button.svg": "/todo-list/static/media/navigation-popup__close-button.71614cf0d0c116dc05f2.svg",
-    "static/media/form__custom-button.svg": "/todo-list/static/media/form__custom-button.314f8193020833b1fa19.svg",
     "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.37e1702cf1787f8880c12bd02b42d307.svg",
     "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.d31ab63cfff895d03f53.svg",
-    "static/media/todo__done-button.svg": "/todo-list/static/media/todo__done-button.6cc50f05b298fbc7da92.svg",
-    "main.d19016d8.css.map": "/todo-list/static/css/main.d19016d8.css.map",
-    "main.e7981a48.js.map": "/todo-list/static/js/main.e7981a48.js.map"
+    "main.92df8522.css.map": "/todo-list/static/css/main.92df8522.css.map",
+    "main.e4e2ed94.js.map": "/todo-list/static/js/main.e4e2ed94.js.map"
   },
   "entrypoints": [
-    "static/css/main.d19016d8.css",
-    "static/js/main.e7981a48.js"
+    "static/css/main.92df8522.css",
+    "static/js/main.e4e2ed94.js"
   ]
 }
