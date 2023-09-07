@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Form from "../Form/Form";
 
 function AddPopup(props) {
   const currentDate = new Date();
@@ -89,8 +90,11 @@ function AddPopup(props) {
 
   return (
     <div className={`popup ${props.isOpen ? 'popup_active' : ''}`}>
-      <form className="form" onSubmit={onSubmit}>
-        <h2 className="form__title">Создание новой задачи</h2>
+      <Form
+        title="Создание новой задачи"
+        onSubmit={onSubmit}
+        buttonText="Добавить задачу"
+      >
         <h3 className="form__input-title">Придумайте название для задачи</h3>
         <input
           type="text"
@@ -114,7 +118,7 @@ function AddPopup(props) {
           value={description}
         />
         <h3 className="form__input-title">Выберите крайний срок выполнения</h3>
-        <div>
+        <div className="form__date-container">
           <input
             type="date"
             value={selectedDate}
@@ -127,12 +131,10 @@ function AddPopup(props) {
             type="time"
             value={selectedTime}
             onChange={handleTimeChange}
-            min={formatTime(currentHour, currentMinute)}
             required
           />
         </div>
-        <button type="submit" className="form__submit-button">Добавить задачу</button>
-      </form>
+      </Form>
     </div>
   );
 };

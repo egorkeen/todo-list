@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Todo({ todo, onDeleteButtonClick, onDoneButtonClick, onTodoClick }) {
+function Todo({ todo, onDeleteButtonClick, onDoneButtonClick, onTodoClick, onEditButtonClick }) {
   const [isDone, setDone] = useState(todo.isDone);
   
   function handleDoneClick() {
@@ -8,7 +8,7 @@ function Todo({ todo, onDeleteButtonClick, onDoneButtonClick, onTodoClick }) {
   }
 
   function handleEditClick() {
-
+    onEditButtonClick(todo);
   }
 
   function handleTodoClick () {

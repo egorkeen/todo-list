@@ -20,6 +20,7 @@ function Todos(props) {
                 onDeleteButtonClick={props.onDeleteButtonClick}
                 onDoneButtonClick={props.onDoneButtonClick}
                 onTodoClick={props.onTodoClick}
+                onEditButtonClick={props.onEditButtonClick}
               />
             ))
           ) : (

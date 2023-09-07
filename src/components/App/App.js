@@ -7,6 +7,7 @@ import Todos from "../Todos/Todos";
 import DoneTodos from "../DoneTodos/DoneTodos";
 import AddPopup from "../AddPopup/AddPopup";
 import TodoPopup from "../TodoPopup/TodoPopup";
+import EditPopup from "../EditPopup/EditPopup";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -60,16 +61,27 @@ function App() {
   }
 
   function handleEditClick(todo) {
-
+    setSelectedTodo(todo);
+    setEditPopupOpen(true);
   }
 
   function handleTodoClick (todo) {
-    setTodoPopupOpen(true);
     setSelectedTodo(todo);
+    setTodoPopupOpen(true);
   }
 
   function onAddSubmit(todo) {
     const newTodos = [todo, ...todos];
+    setTodos(newTodos);
+    localStorage.setItem('todos', JSON.stringify(newTodos));
+    closeAllPopups();
+  }
+
+  function onEditSubmit(todo) {
+    const newTodo = todo;
+    console.log(newTodo);
+    const updatedTodos = todos.slice().filter((t) => t !== selectedTodo);
+    const newTodos = [newTodo, ...updatedTodos];
     setTodos(newTodos);
     localStorage.setItem('todos', JSON.stringify(newTodos));
     closeAllPopups();
@@ -129,6 +141,13 @@ function App() {
         isOpen={isTodoPopupOpen}
         onClose={closeAllPopups}
         selectedTodo={selectedTodo}
+      />
+
+      <EditPopup
+        isOpen={isEditPopupOpen}
+        onClose={closeAllPopups}
+        selectedTodo={selectedTodo}
+        onSubmit={onEditSubmit}
       />
     </>
   );

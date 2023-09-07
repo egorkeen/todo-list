@@ -1,6 +1,6 @@
 .todo-popup__container {
-  width: 500px;
-  height: 520px;
+  width: 600px;
+  min-height: 520px;
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -9,13 +9,11 @@
 }
 
 .todo-popup__task {
-  max-width: 250px;
+  max-width: 400px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  text-align: center;
   margin: 25px 0 10px;
   transition: .1s linear;
 }
