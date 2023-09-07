@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/todo-list/static/css/main.92df8522.css",
-    "main.js": "/todo-list/static/js/main.e4e2ed94.js",
+    "main.js": "/todo-list/static/js/main.a1457fb0.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
     "static/media/possibilities__image-3.png": "/todo-list/static/media/possibilities__image-3.cd5d493a9059337ed75d.png",
@@ -23,10 +23,10 @@
     "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.37e1702cf1787f8880c12bd02b42d307.svg",
     "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.d31ab63cfff895d03f53.svg",
     "main.92df8522.css.map": "/todo-list/static/css/main.92df8522.css.map",
-    "main.e4e2ed94.js.map": "/todo-list/static/js/main.e4e2ed94.js.map"
+    "main.a1457fb0.js.map": "/todo-list/static/js/main.a1457fb0.js.map"
   },
   "entrypoints": [
     "static/css/main.92df8522.css",
-    "static/js/main.e4e2ed94.js"
+    "static/js/main.a1457fb0.js"
   ]
 }
