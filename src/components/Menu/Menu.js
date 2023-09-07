@@ -15,7 +15,7 @@ function Menu(props) {
             Todoist – список дел, который поможет вам обрести концентрацию,
             организованность и покой.
           </p>
-          <Link to="/main" className="menu__button">
+          <Link to="/todo" className="menu__button">
             Начать
           </Link>
         </div>
