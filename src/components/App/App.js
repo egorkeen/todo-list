@@ -30,33 +30,33 @@ function App() {
   function handleTodoDelete(todo) {
     if (!todo.isDone) {
       const updatedTodos = todos.slice().filter((t) => t !== todo);
-      localStorage.setItem('todos', JSON.stringify(updatedTodos));
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
       setTodos(updatedTodos);
     } else if (todo.isDone) {
       const updatedDoneTodos = doneTodos.slice().filter((t) => t !== todo);
-      localStorage.setItem('doneTodos', JSON.stringify(updatedDoneTodos));
+      localStorage.setItem("doneTodos", JSON.stringify(updatedDoneTodos));
       setDoneTodos(updatedDoneTodos);
     }
   }
 
   function handleDoneClick(todo) {
-    console.log(todo)
+    console.log(todo);
     if (!todo.isDone) {
       todo.isDone = true;
       const updatedTodos = todos.slice().filter((t) => t !== todo);
-      localStorage.setItem('todos', JSON.stringify(updatedTodos));
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
       setTodos(updatedTodos);
       const updatedDoneTodos = [todo, ...doneTodos];
       setDoneTodos(updatedDoneTodos);
-      localStorage.setItem('doneTodos', JSON.stringify(updatedDoneTodos));
+      localStorage.setItem("doneTodos", JSON.stringify(updatedDoneTodos));
     } else {
       todo.isDone = false;
       const updatedDoneTodos = doneTodos.slice().filter((t) => t !== todo);
-      localStorage.setItem('doneTodos', JSON.stringify(updatedDoneTodos));
+      localStorage.setItem("doneTodos", JSON.stringify(updatedDoneTodos));
       setDoneTodos(updatedDoneTodos);
       const updatedTodos = [todo, ...todos];
       setTodos(updatedTodos);
-      localStorage.setItem('todos', JSON.stringify(updatedTodos));
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
     }
   }
 
@@ -65,7 +65,7 @@ function App() {
     setEditPopupOpen(true);
   }
 
-  function handleTodoClick (todo) {
+  function handleTodoClick(todo) {
     setSelectedTodo(todo);
     setTodoPopupOpen(true);
   }
@@ -73,7 +73,7 @@ function App() {
   function onAddSubmit(todo) {
     const newTodos = [todo, ...todos];
     setTodos(newTodos);
-    localStorage.setItem('todos', JSON.stringify(newTodos));
+    localStorage.setItem("todos", JSON.stringify(newTodos));
     closeAllPopups();
   }
 
@@ -83,13 +83,13 @@ function App() {
     const updatedTodos = todos.slice().filter((t) => t !== selectedTodo);
     const newTodos = [newTodo, ...updatedTodos];
     setTodos(newTodos);
-    localStorage.setItem('todos', JSON.stringify(newTodos));
+    localStorage.setItem("todos", JSON.stringify(newTodos));
     closeAllPopups();
   }
 
   useEffect(() => {
-    const localTodos = JSON.parse(localStorage.getItem('todos'));
-    const localDoneTodos = JSON.parse(localStorage.getItem('doneTodos'));
+    const localTodos = JSON.parse(localStorage.getItem("todos"));
+    const localDoneTodos = JSON.parse(localStorage.getItem("doneTodos"));
     if (localTodos) {
       setTodos(localTodos);
     }
@@ -121,7 +121,7 @@ function App() {
         <Route
           path="/done-todos"
           element={
-            <DoneTodos 
+            <DoneTodos
               doneTodos={doneTodos}
               onDeleteButtonClick={handleTodoDelete}
               onDoneButtonClick={handleDoneClick}

@@ -26,7 +26,7 @@ function Todos(props) {
           ) : (
             // если ничего нет, то будет надпись ниже
             <>
-              <p/>
+              <p />
               <p className="main__no-tasks">
                 У вас пока нет задач {":("}
                 <br />

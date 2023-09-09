@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form (props) {
+function Form(props) {
   return (
     <form className="form" onSubmit={props.onSubmit}>
       <h2 className="form__title">{props.title}</h2>
@@ -10,6 +10,6 @@ function Form (props) {
       </button>
     </form>
   );
-};
+}
 
 export default Form;

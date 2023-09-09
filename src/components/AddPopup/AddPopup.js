@@ -19,20 +19,22 @@ function AddPopup(props) {
     return `${formattedHour}:${formattedMinute}`;
   };
 
-  const [task, setTask] = useState('');
+  const [task, setTask] = useState("");
   const [selectedDate, setSelectedDate] = useState(formatDate(currentDate));
-  const [selectedTime, setSelectedTime] = useState(formatTime(currentHour, currentMinute));
-  const [description, setDescription] = useState('');
+  const [selectedTime, setSelectedTime] = useState(
+    formatTime(currentHour, currentMinute)
+  );
+  const [description, setDescription] = useState("");
 
   // это необходимо, чтобы удалить/добавить слушатели
   useEffect(() => {
     if (props.isOpen) {
       document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("click", handleClickOutside);
-      setTask('');
+      setTask("");
       setSelectedDate(currentDate.toISOString().split("T")[0]);
       setSelectedTime(formatTime(currentHour, currentMinute));
-      setDescription('');
+      setDescription("");
     }
 
     return () => {
@@ -42,9 +44,9 @@ function AddPopup(props) {
   }, [props.isOpen]);
 
   // отслеживаем изменение значения task
-  function handleTaskChange (e) {
+  function handleTaskChange(e) {
     setTask(e.target.value);
-  };
+  }
 
   // deadline
   const handleDateChange = (e) => {
@@ -53,12 +55,12 @@ function AddPopup(props) {
 
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
-  }
+  };
 
   // description
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
-  }
+  };
 
   // закрыть попап при нажатии на esc
   function handleKeyDown(e) {
@@ -77,19 +79,17 @@ function AddPopup(props) {
   // добавить todo'шку
   function onSubmit(e) {
     e.preventDefault();
-    props.onSubmit(
-      {
-        task: task,
-        date: formatDate(new Date(selectedDate)),
-        time: selectedTime,
-        description: description,
-        isDone: false
-      }
-    );
-  };
+    props.onSubmit({
+      task: task,
+      date: formatDate(new Date(selectedDate)),
+      time: selectedTime,
+      description: description,
+      isDone: false,
+    });
+  }
 
   return (
-    <div className={`popup ${props.isOpen ? 'popup_active' : ''}`}>
+    <div className={`popup ${props.isOpen ? "popup_active" : ""}`}>
       <Form
         title="Создание новой задачи"
         onSubmit={onSubmit}
@@ -107,7 +107,7 @@ function AddPopup(props) {
           onChange={handleTaskChange}
         />
         <h3 className="form__input-title">Опишите задачу</h3>
-        <textarea 
+        <textarea
           type="text"
           placeholder="Описание"
           className="form__description-input"
@@ -137,6 +137,6 @@ function AddPopup(props) {
       </Form>
     </div>
   );
-};
+}
 
 export default AddPopup;

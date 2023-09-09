@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Todo from "../Todo/Todo";
 
-function DoneTodos (props) {
+function DoneTodos(props) {
   return (
     <>
       <Header />
@@ -12,19 +12,19 @@ function DoneTodos (props) {
         <section className="main__todo-container">
           {props.doneTodos.length > 0 ? (
             // если есть хоть одна тудушка, то она отрендерится
-              props.doneTodos.map((todo) => (
-                <Todo
-                  todo={todo}
-                  key={todo.id}
-                  onDeleteButtonClick={props.onDeleteButtonClick}
-                  onDoneButtonClick={props.onDoneButtonClick}
-                  onTodoClick={props.onTodoClick}
-                />
-              ))
-            ) : (
+            props.doneTodos.map((todo) => (
+              <Todo
+                todo={todo}
+                key={todo.id}
+                onDeleteButtonClick={props.onDeleteButtonClick}
+                onDoneButtonClick={props.onDoneButtonClick}
+                onTodoClick={props.onTodoClick}
+              />
+            ))
+          ) : (
             // если ничего нет, то будет надпись ниже
             <>
-              <p/>
+              <p />
               <p className="main__no-tasks">
                 Пока не выполнено ни одной задачи {":("}
                 <br />
@@ -33,9 +33,9 @@ function DoneTodos (props) {
           )}
         </section>
       </main>
-        <Footer />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default DoneTodos;
