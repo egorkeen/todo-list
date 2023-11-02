@@ -92,6 +92,15 @@
     width: 24px;
     height: 24px;
   }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__burger-menu {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

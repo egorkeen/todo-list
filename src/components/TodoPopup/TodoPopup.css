@@ -45,6 +45,8 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .todo-popup__container {
     width: 280px;
+    min-width: 280px;
+    width: 90vw;
   }
 
   .todo-popup__deadline {
