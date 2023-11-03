@@ -1,39 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from '../../store/todos/todos-actions';
 import Form from "../Form/Form";
 
-function AddPopup(props) {
-  const currentDate = new Date();
-  const currentHour = currentDate.getHours();
-  const currentMinute = currentDate.getMinutes();
-
-  const formatDate = (date) => {
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear();
-    return `${day}.${month}.${year}`;
-  };
-
-  const formatTime = (hour, minute) => {
-    const formattedHour = hour.toString().padStart(2, "0");
-    const formattedMinute = minute.toString().padStart(2, "0");
-    return `${formattedHour}:${formattedMinute}`;
-  };
+function AddPopup({ isOpen, onClose }) {
+  const dispatch = useDispatch();
 
   const [task, setTask] = useState("");
-  const [selectedDate, setSelectedDate] = useState(formatDate(currentDate));
-  const [selectedTime, setSelectedTime] = useState(
-    formatTime(currentHour, currentMinute)
-  );
   const [description, setDescription] = useState("");
 
   // это необходимо, чтобы удалить/добавить слушатели
   useEffect(() => {
-    if (props.isOpen) {
+    if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("click", handleClickOutside);
       setTask("");
-      setSelectedDate(currentDate.toISOString().split("T")[0]);
-      setSelectedTime(formatTime(currentHour, currentMinute));
       setDescription("");
     }
 
@@ -41,21 +22,12 @@ function AddPopup(props) {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [props.isOpen]);
+  }, [isOpen]);
 
   // отслеживаем изменение значения task
   function handleTaskChange(e) {
     setTask(e.target.value);
   }
-
-  // deadline
-  const handleDateChange = (e) => {
-    setSelectedDate(e.target.value);
-  };
-
-  const handleTimeChange = (e) => {
-    setSelectedTime(e.target.value);
-  };
 
   // description
   const handleDescriptionChange = (e) => {
@@ -65,31 +37,30 @@ function AddPopup(props) {
   // закрыть попап при нажатии на esc
   function handleKeyDown(e) {
     if (e.key === "Escape") {
-      props.onClose();
+      onClose();
     }
   }
 
   // закрыть попап при клике по попапу
   function handleClickOutside(e) {
     if (e.target.classList.contains("popup")) {
-      props.onClose();
+      onClose();
     }
   }
 
   // добавить todo'шку
   function onSubmit(e) {
     e.preventDefault();
-    props.onSubmit({
-      task: task,
-      date: formatDate(new Date(selectedDate)),
-      time: selectedTime,
-      description: description,
-      isDone: false,
-    });
+    dispatch(addTodo({
+      task,
+      description,
+      isDone: false
+    }));
+    onClose();
   }
 
   return (
-    <div className={`popup ${props.isOpen ? "popup_active" : ""}`}>
+    <div className={`popup ${isOpen ? "popup_active" : ""}`}>
       <Form
         title="Создание новой задачи"
         onSubmit={onSubmit}
@@ -117,23 +88,6 @@ function AddPopup(props) {
           onChange={handleDescriptionChange}
           value={description}
         />
-        <h3 className="form__input-title">Выберите крайний срок выполнения</h3>
-        <div className="form__date-container">
-          <input
-            type="date"
-            value={selectedDate}
-            onChange={handleDateChange}
-            min={currentDate.toISOString().split("T")[0]}
-            max="2060-12-31"
-            required
-          />
-          <input
-            type="time"
-            value={selectedTime}
-            onChange={handleTimeChange}
-            required
-          />
-        </div>
       </Form>
     </div>
   );

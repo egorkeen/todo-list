@@ -4,7 +4,6 @@ import "../../index.css";
 import Menu from "../Menu/Menu";
 import Possibilities from "../Possibilities/Possibilities";
 import Todos from "../Todos/Todos";
-import DoneTodos from "../DoneTodos/DoneTodos";
 import AddPopup from "../AddPopup/AddPopup";
 import TodoPopup from "../TodoPopup/TodoPopup";
 import EditPopup from "../EditPopup/EditPopup";
@@ -83,16 +82,6 @@ function App() {
             />
           }
         />
-        {/* <Route
-          path="/done-todos"
-          element={
-            <DoneTodos
-              onDeleteButtonClick={handleTodoDelete}
-              onDoneButtonClick={handleDoneClick}
-              onTodoClick={handleTodoClick}
-            />
-          }
-        /> */}
       </Routes>
 
       <AddPopup
