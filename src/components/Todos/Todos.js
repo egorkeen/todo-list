@@ -6,7 +6,7 @@ import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
 import { selectVisibleTodos } from "../../store/todos/todos-selectors";
 import { selectCurrentFilter } from "../../store/filters/filters-selectors";
-import { completeTodo, editTodo, removeTodo } from "../../store/todos/todos-actions";
+import { completeTodo, editTodo, removeTodo, selectTodo } from "../../store/todos/todos-actions";
 
 function Todos(props) {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ function Todos(props) {
   );
 
   const handleDeleteTodo = (todo) => {
-    dispatch(removeTodo(todo));
+    dispatch(removeTodo(todo.id));
   };
 
   const handleEditTodo = (todo) => {
@@ -26,7 +26,11 @@ function Todos(props) {
 
   const handleCompleteTodo = (todo) => {
     dispatch(completeTodo(todo));
-  }
+  };
+
+  const handleSelectTodo = (todo) => {
+    dispatch(selectTodo(todo));
+  };
 
   return (
     <>
@@ -44,7 +48,7 @@ function Todos(props) {
                 key={todo.id}
                 onDeleteButtonClick={handleDeleteTodo}
                 onCompleteButtonClick={handleCompleteTodo}
-                onTodoClick={props.onTodoClick}
+                onTodoClick={handleSelectTodo}
                 onEditButtonClick={handleEditTodo}
               />
             ))

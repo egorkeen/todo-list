@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../../index.css";
 import Menu from "../Menu/Menu";
 import Possibilities from "../Possibilities/Possibilities";
@@ -54,7 +54,6 @@ function App() {
           element={
             <Todos
               todos={todos}
-              onTodoClick={handleTodoClick}
               onAddButtonClick={openAddPopup}
               onEditButtonClick={handleEditClick}
             />
@@ -67,7 +66,6 @@ function App() {
       <TodoPopup
         isOpen={isTodoPopupOpen}
         onClose={closeAllPopups}
-        selectedTodo={selectedTodo}
       />
 
       <EditPopup
