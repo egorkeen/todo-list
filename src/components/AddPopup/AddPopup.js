@@ -54,7 +54,8 @@ function AddPopup({ isOpen, onClose }) {
     dispatch(addTodo({
       task,
       description,
-      isDone: false
+      isCompleted: false,
+      id: new Date(),
     }));
     onClose();
   }

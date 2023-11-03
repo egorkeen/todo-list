@@ -1,15 +1,33 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
 import { selectVisibleTodos } from "../../store/todos/todos-selectors";
-import { selectCurrentFilter } from '../../store/filters/filters-selectors';
+import { selectCurrentFilter } from "../../store/filters/filters-selectors";
+import { completeTodo, editTodo, removeTodo } from "../../store/todos/todos-actions";
 
 function Todos(props) {
-  const currentFilter = useSelector(selectCurrentFilter)
-  const todos = useSelector(state => selectVisibleTodos(state, currentFilter));
+  const dispatch = useDispatch();
+
+  const currentFilter = useSelector(selectCurrentFilter);
+  const todos = useSelector((state) =>
+    selectVisibleTodos(state, currentFilter)
+  );
+
+  const handleDeleteTodo = (todo) => {
+    dispatch(removeTodo(todo));
+  };
+
+  const handleEditTodo = (todo) => {
+    dispatch(editTodo(todo));
+  };
+
+  const handleCompleteTodo = (todo) => {
+    dispatch(completeTodo(todo));
+  }
+
   return (
     <>
       <Header />
@@ -24,10 +42,10 @@ function Todos(props) {
               <Todo
                 todo={todo}
                 key={todo.id}
-                onDeleteButtonClick={props.onDeleteButtonClick}
-                onDoneButtonClick={props.onDoneButtonClick}
+                onDeleteButtonClick={handleDeleteTodo}
+                onCompleteButtonClick={handleCompleteTodo}
                 onTodoClick={props.onTodoClick}
-                onEditButtonClick={props.onEditButtonClick}
+                onEditButtonClick={handleEditTodo}
               />
             ))
           ) : (

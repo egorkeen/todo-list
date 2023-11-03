@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Todo({
   todo,
   onDeleteButtonClick,
-  onDoneButtonClick,
+  onCompleteButtonClick,
   onTodoClick,
   onEditButtonClick,
 }) {
-  const [isDone, setDone] = useState(todo.isDone);
-
-  function handleDoneClick() {
-    onDoneButtonClick(todo);
+  function handleCompleteClick() {
+    onCompleteButtonClick(todo);
   }
 
   function handleEditClick() {
@@ -26,10 +24,10 @@ function Todo({
   }
 
   return (
-    <article className={`${isDone ? "todo_done" : "todo"}`}>
+    <article className={`${todo.isCompleted ? "todo_completed" : "todo"}`}>
       <h3
         onClick={handleTodoClick}
-        className={`todo__task ${isDone ? "todo__task_done" : ""}`}
+        className={`todo__task ${todo.isCompleted ? "todo__task_completed" : ""}`}
       >
         {todo.task}
       </h3>
@@ -39,31 +37,31 @@ function Todo({
       </span>
       <p />
       <p
-        className={`${isDone ? "todo__description_done" : "todo__description"}`}
+        className={`${todo.isComplete ? "todo__description_completed" : "todo__description"}`}
       >
         {todo.description}
       </p>
       <p />
-      {isDone ? (
+      {todo.isComplete ? (
         <>
           <button
-            className={`todo__done-button ${
-              isDone ? "todo__done-button_active" : ""
+            className={`todo__complete-button ${
+              todo.isCompleted ? "todo__complete-button_active" : ""
             }`}
-            onClick={handleDoneClick}
+            onClick={handleCompleteClick}
           />
         </>
       ) : (
         <>
           <button
-            className={`todo__done-button ${
-              isDone ? "todo__done-button_active" : ""
+            className={`todo__complete-button ${
+              todo.isCompleted ? "todo__complete-button_active" : ""
             }`}
-            onClick={handleDoneClick}
+            onClick={handleCompleteClick}
           >
-            Завершить
+            {todo.isCompleted ? '' : 'Завершить'}
           </button>
-          <button className="todo__edit-button" onClick={handleEditClick} />
+          {!todo.isCompleted && <button className="todo__edit-button" onClick={handleEditClick} />}
         </>
       )}
     </article>

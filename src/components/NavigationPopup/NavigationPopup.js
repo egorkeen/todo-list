@@ -77,17 +77,6 @@ function NavigationPopup(props) {
           >
             Задачи
           </NavLink>
-          <NavLink
-            onClick={props.onClose}
-            to="/done-todos"
-            className={({ isActive }) =>
-              isActive
-                ? "navigation-popup__button_active"
-                : "navigation-popup__button"
-            }
-          >
-            Выполненнные задачи
-          </NavLink>
         </nav>
       </div>
     </div>

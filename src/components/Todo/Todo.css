@@ -10,7 +10,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.todo_done {
+.todo_completed {
   width: 400px;
   height: 533px;
   border: 2px solid #F8917B;
@@ -43,12 +43,12 @@
   cursor: pointer;
 }
 
-.todo__task_done {
+.todo__task_completed {
   text-decoration: line-through;
   color: #9E9A9A;
 }
 
-.todo__task_done:hover {
+.todo__task_completed:hover {
   cursor: pointer;
 }
 
@@ -72,7 +72,7 @@
   -webkit-box-orient: vertical;
 }
 
-.todo__description_done {
+.todo__description_completed {
   color: #9E9A9A;
   text-decoration: line-through;
   height: 270px;
@@ -86,7 +86,7 @@
   -webkit-box-orient: vertical;
 }
 
-.todo__done-button {
+.todo__complete-button {
   width: 250px;
   height: 70px;
   border-radius: 10px;
@@ -103,15 +103,15 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.todo__done-button:hover {
+.todo__complete-button:hover {
   opacity: .8;
 }
 
-.todo__done-button_active {
+.todo__complete-button_active {
   border-radius: 10px;
   border: 2px solid #ffb3a2;
   background-color: #ffb3a2;
-  background-image: url(../../images/todo/todo__done-button_active.svg);
+  background-image: url(../../images/todo/todo__complete-button_active.svg);
   background-repeat: no-repeat;
   background-size: 39px 31px;
   background-position: center;
@@ -165,12 +165,12 @@
     grid-template-columns: 258px 1fr;
   }
 
-  .todo_done {
+  .todo_completed {
     width: 370px;
     grid-template-columns: 258px 1fr;
   }
 
-  .todo__task_done {
+  .todo__task_completed {
     width: 260px;
   }
 
@@ -183,11 +183,11 @@
     margin-left: 55px;
   }
 
-  .todo__done-button {
+  .todo__complete-button {
     width: 250px;
   }
 
-  .todo__done-button_active {
+  .todo__complete-button_active {
     width: 250px;
   }
 
@@ -203,7 +203,7 @@
     grid-template-columns: 192px 1fr;
   }
 
-  .todo_done {
+  .todo_completed {
     width: 280px;
     height: 420px;
     grid-template-columns: 192px 1fr;
@@ -216,7 +216,7 @@
     line-height: 30px;
   }
 
-  .todo__task_done {
+  .todo__task_completed {
     width: 165px;
     margin: 15px 30px 0 10px;
     font-size: 30px;
@@ -227,17 +227,17 @@
     height: 200px;
   }
 
-  .todo__description_done {
+  .todo__description_completed {
     height: 200px;
   }
 
-  .todo__done-button {
+  .todo__complete-button {
     width: 165px;
     height: 55px;
     font-size: 20px;
   }
 
-  .todo__done-button_active {
+  .todo__complete-button_active {
     width: 165px;
     height: 55px;
     font-size: 20px;

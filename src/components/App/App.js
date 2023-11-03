@@ -25,21 +25,6 @@ function App() {
     setTodoPopupOpen(false);
   }
 
-  function handleTodoDelete(todo) {
-    if (!todo.isDone) {
-      const updatedTodos = todos.slice().filter((t) => t !== todo);
-    }
-  }
-
-  function handleDoneClick(todo) {
-    if (!todo.isDone) {
-      todo.isDone = true;
-    } else {
-      todo.isDone = false;
-    }
-    setTodos([...todos, todo]);
-  }
-
   function handleEditClick(todo) {
     setSelectedTodo(todo);
     setEditPopupOpen(true);
@@ -48,11 +33,6 @@ function App() {
   function handleTodoClick(todo) {
     setSelectedTodo(todo);
     setTodoPopupOpen(true);
-  }
-
-  function onAddSubmit(todo) {
-    setTodos([...todos, todo]);
-    closeAllPopups();
   }
 
   function onEditSubmit(todo) {
@@ -76,19 +56,13 @@ function App() {
               todos={todos}
               onTodoClick={handleTodoClick}
               onAddButtonClick={openAddPopup}
-              onDeleteButtonClick={handleTodoDelete}
-              onDoneButtonClick={handleDoneClick}
               onEditButtonClick={handleEditClick}
             />
           }
         />
       </Routes>
 
-      <AddPopup
-        isOpen={isAddPopupOpen}
-        onSubmit={onAddSubmit}
-        onClose={closeAllPopups}
-      />
+      <AddPopup isOpen={isAddPopupOpen} onClose={closeAllPopups} />
 
       <TodoPopup
         isOpen={isTodoPopupOpen}
