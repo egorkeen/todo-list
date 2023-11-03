@@ -35,7 +35,11 @@
   padding: 0;
 }
 
-.main__todo-container {
+.main__todos-filters {
+  border: 1px solid red;
+}
+
+.main__todos-container {
   width: 1280px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

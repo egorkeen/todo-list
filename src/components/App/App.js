@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../../index.css";
 import Menu from "../Menu/Menu";
@@ -11,7 +11,6 @@ import EditPopup from "../EditPopup/EditPopup";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const [doneTodos, setDoneTodos] = useState([]);
   const [selectedTodo, setSelectedTodo] = useState({});
   const [isAddPopupOpen, setAddPopupOpen] = useState(false);
   const [isEditPopupOpen, setEditPopupOpen] = useState(false);
@@ -30,34 +29,16 @@ function App() {
   function handleTodoDelete(todo) {
     if (!todo.isDone) {
       const updatedTodos = todos.slice().filter((t) => t !== todo);
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
-      setTodos(updatedTodos);
-    } else if (todo.isDone) {
-      const updatedDoneTodos = doneTodos.slice().filter((t) => t !== todo);
-      localStorage.setItem("doneTodos", JSON.stringify(updatedDoneTodos));
-      setDoneTodos(updatedDoneTodos);
     }
   }
 
   function handleDoneClick(todo) {
-    console.log(todo);
     if (!todo.isDone) {
       todo.isDone = true;
-      const updatedTodos = todos.slice().filter((t) => t !== todo);
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
-      setTodos(updatedTodos);
-      const updatedDoneTodos = [todo, ...doneTodos];
-      setDoneTodos(updatedDoneTodos);
-      localStorage.setItem("doneTodos", JSON.stringify(updatedDoneTodos));
     } else {
       todo.isDone = false;
-      const updatedDoneTodos = doneTodos.slice().filter((t) => t !== todo);
-      localStorage.setItem("doneTodos", JSON.stringify(updatedDoneTodos));
-      setDoneTodos(updatedDoneTodos);
-      const updatedTodos = [todo, ...todos];
-      setTodos(updatedTodos);
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
     }
+    setTodos([...todos, todo]);
   }
 
   function handleEditClick(todo) {
@@ -71,33 +52,18 @@ function App() {
   }
 
   function onAddSubmit(todo) {
-    const newTodos = [todo, ...todos];
-    setTodos(newTodos);
-    localStorage.setItem("todos", JSON.stringify(newTodos));
+    setTodos([...todos, todo]);
     closeAllPopups();
   }
 
   function onEditSubmit(todo) {
     const newTodo = todo;
-    console.log(newTodo);
     const updatedTodos = todos.slice().filter((t) => t !== selectedTodo);
     const newTodos = [newTodo, ...updatedTodos];
     setTodos(newTodos);
     localStorage.setItem("todos", JSON.stringify(newTodos));
     closeAllPopups();
   }
-
-  useEffect(() => {
-    const localTodos = JSON.parse(localStorage.getItem("todos"));
-    const localDoneTodos = JSON.parse(localStorage.getItem("doneTodos"));
-    if (localTodos) {
-      setTodos(localTodos);
-    }
-
-    if (localDoneTodos) {
-      setDoneTodos(localDoneTodos);
-    }
-  }, []);
 
   return (
     <>
@@ -109,7 +75,6 @@ function App() {
           element={
             <Todos
               todos={todos}
-              doneTodos={doneTodos}
               onTodoClick={handleTodoClick}
               onAddButtonClick={openAddPopup}
               onDeleteButtonClick={handleTodoDelete}
@@ -118,17 +83,16 @@ function App() {
             />
           }
         />
-        <Route
+        {/* <Route
           path="/done-todos"
           element={
             <DoneTodos
-              doneTodos={doneTodos}
               onDeleteButtonClick={handleTodoDelete}
               onDoneButtonClick={handleDoneClick}
               onTodoClick={handleTodoClick}
             />
           }
-        />
+        /> */}
       </Routes>
 
       <AddPopup

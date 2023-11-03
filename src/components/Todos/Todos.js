@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Todo from "../Todo/Todo";
+import Filters from "../Filters/Filters";
 
 function Todos(props) {
   return (
@@ -10,7 +11,8 @@ function Todos(props) {
 
       <main className="main">
         <h2 className="main__title">Список задач</h2>
-        <section className="main__todo-container">
+        <Filters />
+        <section className="main__todos-container">
           {props.todos.length > 0 ? (
             // если есть хоть одна тудушка, то она отрендерится
             props.todos.map((todo) => (
