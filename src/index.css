@@ -59,3 +59,6 @@ body {
 
 /* todo */
 @import url(./components/Todo/Todo.css);
+
+/* Filters */
+@import url(./components//Filters/Filters.css);

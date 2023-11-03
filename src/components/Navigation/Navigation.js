@@ -41,14 +41,6 @@ function Navigation(props) {
         >
           Задачи
         </NavLink>
-        <NavLink
-          to="/done-todos"
-          className={({ isActive }) =>
-            isActive ? "header__link_active" : "header__link"
-          }
-        >
-          Выполненнные задачи
-        </NavLink>
       </nav>
 
       <nav onClick={openBurgerMenu} className="header__burger-menu">

@@ -38,38 +38,7 @@ function Footer(props) {
           >
             Задачи
           </NavLink>
-          <NavLink
-            to="/done-todos"
-            className={({ isActive }) =>
-              isActive ? "footer__link_active" : "footer__link"
-            }
-          >
-            Выполненные задачи
-          </NavLink>
         </nav>
-        <div className="footer__socials">
-          <div className="footer__social">
-            <img
-              src={footer__logoMail}
-              className="footer__image-logo"
-              alt="Логотип почты mail.ru"
-            />
-            <p className="footer__profession">
-              Веб-разработчик:{" "}
-              <span className="footer__contact">egor.keen@mail.ru</span>
-            </p>
-          </div>
-          <div className="footer__social">
-            <img
-              src={footer__logoTelegram}
-              className="footer__image-logo"
-              alt="Логотип Telegram"
-            />
-            <p className="footer__profession">
-              Веб-дизайнер: <span className="footer__contact">@nastlett</span>
-            </p>
-          </div>
-        </div>
         <span className="footer__date">2023</span>
       </div>
     </footer>
