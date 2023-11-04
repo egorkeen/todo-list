@@ -25,13 +25,11 @@ function App() {
     setTodoPopupOpen(false);
   }
 
-  function handleEditClick(todo) {
-    setSelectedTodo(todo);
+  function handleEditClick() {
     setEditPopupOpen(true);
   }
 
-  function handleTodoClick(todo) {
-    setSelectedTodo(todo);
+  function handleTodoClick() {
     setTodoPopupOpen(true);
   }
 
@@ -55,6 +53,7 @@ function App() {
             <Todos
               todos={todos}
               onAddButtonClick={openAddPopup}
+              onTodoClick={handleTodoClick}
               onEditButtonClick={handleEditClick}
             />
           }

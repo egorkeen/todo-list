@@ -1,14 +1,16 @@
 import {
   ADD_TODO,
   REMOVE_TODO,
-  EDIT_TODO,
-  COMPLETE_TODO,
+  // EDIT_TODO,
+  TOGGLE_TODO,
   SELECT_TODO,
+  SET_FILTER,
 } from "./todos-actions";
 
 const initialState = {
   list: [],
   selectedTodo: null,
+  currentFilter: "all",
   isEditPopupOpen: false,
   isTodoPopupOpen: false,
 };
@@ -17,7 +19,10 @@ export const todosReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_TODO:
       if (!state.list.includes(payload)) {
-        return { ...state, list: [...state.list, payload] };
+        return {
+          ...state,
+          list: [...state.list, payload],
+        };
       }
       return state;
 
@@ -25,7 +30,8 @@ export const todosReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         list: state.list.filter((todo) => todo.id !== payload),
-      };
+      }
+
 
     // case EDIT_TODO:
 
@@ -33,9 +39,9 @@ export const todosReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         selectedTodo: payload,
-      }
+      };
 
-    case COMPLETE_TODO:
+    case TOGGLE_TODO:
       return {
         ...state,
         list: state.list.map((todo) =>
@@ -43,6 +49,12 @@ export const todosReducer = (state = initialState, { type, payload }) => {
             ? { ...todo, isCompleted: !todo.isCompleted }
             : todo
         ),
+      };
+
+    case SET_FILTER:
+      return {
+        ...state,
+        currentFilter: payload,
       };
 
     default:

@@ -1,1 +1,0 @@
-export const selectCurrentFilter = (state) => state.currentFilter;

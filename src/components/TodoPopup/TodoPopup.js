@@ -34,12 +34,12 @@ function TodoPopup(props) {
   return (
     <div className={`popup ${props.isOpen ? "popup_active" : ""}`}>
       <div className="todo-popup__container">
-        <h2 className="todo-popup__task">{selectedTodo.task}</h2>
+        <h2 className="todo-popup__task">{selectedTodo?.task}</h2>
         <span className="todo-popup__deadline">
-          Выполнить до {selectedTodo.date} {selectedTodo.time}
+          Выполнить до {selectedTodo?.date} {selectedTodo?.time}
         </span>
         <p className="todo-popup__description">
-          {selectedTodo.description}
+          {selectedTodo?.description}
         </p>
       </div>
     </div>

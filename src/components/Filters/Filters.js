@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCurrentFilter } from "../../store/filters/filters-selectors";
-import { setFilter } from "../../store/filters/filters-actions";
+import { selectCurrentFilter } from "../../store/todos/todos-selectors";
+import { setFilter } from "../../store/todos/todos-actions";
 
 function Filters(props) {
   const dispatch = useDispatch();

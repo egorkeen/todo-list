@@ -3,12 +3,12 @@ import React from "react";
 function Todo({
   todo,
   onDeleteButtonClick,
-  onCompleteButtonClick,
+  onToggleClick,
   onTodoClick,
   onEditButtonClick,
 }) {
-  function handleCompleteClick() {
-    onCompleteButtonClick(todo);
+  function handleToggleClick() {
+    onToggleClick(todo);
   }
 
   function handleEditClick() {
@@ -37,18 +37,18 @@ function Todo({
       </span>
       <p />
       <p
-        className={`${todo.isComplete ? "todo__description_completed" : "todo__description"}`}
+        className={`${todo.isCompleted ? "todo__description_completed" : "todo__description"}`}
       >
         {todo.description}
       </p>
       <p />
-      {todo.isComplete ? (
+      {todo.isCompleted ? (
         <>
           <button
             className={`todo__complete-button ${
               todo.isCompleted ? "todo__complete-button_active" : ""
             }`}
-            onClick={handleCompleteClick}
+            onClick={handleToggleClick}
           />
         </>
       ) : (
@@ -57,7 +57,7 @@ function Todo({
             className={`todo__complete-button ${
               todo.isCompleted ? "todo__complete-button_active" : ""
             }`}
-            onClick={handleCompleteClick}
+            onClick={handleToggleClick}
           >
             {todo.isCompleted ? '' : 'Завершить'}
           </button>

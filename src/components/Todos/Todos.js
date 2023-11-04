@@ -5,10 +5,10 @@ import Footer from "../Footer/Footer";
 import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
 import { selectVisibleTodos } from "../../store/todos/todos-selectors";
-import { selectCurrentFilter } from "../../store/filters/filters-selectors";
-import { completeTodo, editTodo, removeTodo, selectTodo } from "../../store/todos/todos-actions";
+import { selectCurrentFilter } from "../../store/todos/todos-selectors";
+import { toggleTodo, editTodo, removeTodo, selectTodo } from "../../store/todos/todos-actions";
 
-function Todos(props) {
+function Todos({ onAddButtonClick, onTodoClick, onEditButtonClick }) {
   const dispatch = useDispatch();
 
   const currentFilter = useSelector(selectCurrentFilter);
@@ -17,18 +17,20 @@ function Todos(props) {
   );
 
   const handleDeleteTodo = (todo) => {
-    dispatch(removeTodo(todo.id));
+    dispatch(removeTodo(todo));
   };
 
   const handleEditTodo = (todo) => {
+    onEditButtonClick();
     dispatch(editTodo(todo));
   };
 
-  const handleCompleteTodo = (todo) => {
-    dispatch(completeTodo(todo));
+  const handleToggleTodo = (todo) => {
+    dispatch(toggleTodo(todo));
   };
 
   const handleSelectTodo = (todo) => {
+    onTodoClick();
     dispatch(selectTodo(todo));
   };
 
@@ -47,7 +49,7 @@ function Todos(props) {
                 todo={todo}
                 key={todo.id}
                 onDeleteButtonClick={handleDeleteTodo}
-                onCompleteButtonClick={handleCompleteTodo}
+                onToggleClick={handleToggleTodo}
                 onTodoClick={handleSelectTodo}
                 onEditButtonClick={handleEditTodo}
               />
@@ -64,7 +66,7 @@ function Todos(props) {
             </>
           )}
         </section>
-        <button className="main__add-button" onClick={props.onAddButtonClick}>
+        <button className="main__add-button" onClick={onAddButtonClick}>
           Добавить
         </button>
       </main>
