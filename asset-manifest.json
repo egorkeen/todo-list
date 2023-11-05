@@ -1,32 +1,26 @@
 {
   "files": {
-    "main.css": "/todo-list/static/css/main.90e90d32.css",
-    "main.js": "/todo-list/static/js/main.a42027ae.js",
+    "main.css": "/todo-list/static/css/main.811661de.css",
+    "main.js": "/todo-list/static/js/main.18820580.js",
     "static/media/Gilroy-Regular.eot": "/todo-list/static/media/Gilroy-Regular.19055ba082a9f78262f6.eot",
     "static/media/Gilroy-Regular.ttf": "/todo-list/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
-    "static/media/possibilities__image-3.png": "/todo-list/static/media/possibilities__image-3.cd5d493a9059337ed75d.png",
-    "static/media/possibilities__image-1.png": "/todo-list/static/media/possibilities__image-1.b48d4f2e378dedbff101.png",
     "static/media/menu__image.png": "/todo-list/static/media/menu__image.0f6e8554e7a7a55182db.png",
     "static/media/Gilroy-Regular.woff": "/todo-list/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
-    "static/media/possibilities__image-2.png": "/todo-list/static/media/possibilities__image-2.f35b18baab419c18649a.png",
     "static/media/Gilroy-Regular.woff2": "/todo-list/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "static/media/footer__image.svg": "/todo-list/static/media/footer__image.cc496addb0d74c26d2b19b2a6f9fe698.svg",
     "static/media/header__name.svg": "/todo-list/static/media/header__name.8a75826c42c4c6e9ee68869055b66f1d.svg",
-    "static/media/footer__logo-mail.svg": "/todo-list/static/media/footer__logo-mail.e3715c52e2f87635b1c4768e4b927571.svg",
-    "static/media/footer__logo-telegram.svg": "/todo-list/static/media/footer__logo-telegram.825d584120de874714e7ab3d530f8a6b.svg",
-    "static/media/todo__done-button_active.svg": "/todo-list/static/media/todo__done-button_active.5a4632b446122659ccfa.svg",
+    "static/media/todo__complete-button_active.svg": "/todo-list/static/media/todo__complete-button_active.5a4632b446122659ccfa.svg",
     "index.html": "/todo-list/index.html",
     "static/media/header__logo.svg": "/todo-list/static/media/header__logo.3ecdea714d2beb1b72f216916651b4b9.svg",
-    "static/media/possibilities__background-image.svg": "/todo-list/static/media/possibilities__background-image.23f1ddb764c99d753858.svg",
     "static/media/todo__edit-button.svg": "/todo-list/static/media/todo__edit-button.55a54103eb86b6029b13.svg",
     "static/media/navigation-popup__close-button.svg": "/todo-list/static/media/navigation-popup__close-button.71614cf0d0c116dc05f2.svg",
     "static/media/header__burger-image.svg": "/todo-list/static/media/header__burger-image.37e1702cf1787f8880c12bd02b42d307.svg",
     "static/media/todo__delete-button.svg": "/todo-list/static/media/todo__delete-button.d31ab63cfff895d03f53.svg",
-    "main.90e90d32.css.map": "/todo-list/static/css/main.90e90d32.css.map",
-    "main.a42027ae.js.map": "/todo-list/static/js/main.a42027ae.js.map"
+    "main.811661de.css.map": "/todo-list/static/css/main.811661de.css.map",
+    "main.18820580.js.map": "/todo-list/static/js/main.18820580.js.map"
   },
   "entrypoints": [
-    "static/css/main.90e90d32.css",
-    "static/js/main.a42027ae.js"
+    "static/css/main.811661de.css",
+    "static/js/main.18820580.js"
   ]
 }
