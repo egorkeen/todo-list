@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { addTodo } from '../../store/todos/todos-actions';
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, toggleAddPopup } from '../../store/todos/todos-actions';
 import Form from "../Form/Form";
+import { selectOpenedPopup } from "../../store/todos/todos-selectors";
 
-function AddPopup({ isOpen, onClose }) {
+function AddPopup() {
   const dispatch = useDispatch();
-
+  const isOpen = useSelector((state) => selectOpenedPopup(state, 'add-popup'));
   const [task, setTask] = useState("");
   const [description, setDescription] = useState("");
+
+  const closeAddPopup = () => dispatch(toggleAddPopup(false));
 
   // это необходимо, чтобы удалить/добавить слушатели
   useEffect(() => {
@@ -37,14 +40,14 @@ function AddPopup({ isOpen, onClose }) {
   // закрыть попап при нажатии на esc
   function handleKeyDown(e) {
     if (e.key === "Escape") {
-      onClose();
+      closeAddPopup();
     }
   }
 
   // закрыть попап при клике по попапу
   function handleClickOutside(e) {
     if (e.target.classList.contains("popup")) {
-      onClose();
+      closeAddPopup();
     }
   }
 
@@ -57,7 +60,7 @@ function AddPopup({ isOpen, onClose }) {
       isCompleted: false,
       id: new Date(),
     }));
-    onClose();
+    closeAddPopup();
   }
 
   return (

@@ -6,9 +6,16 @@ import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
 import { selectVisibleTodos } from "../../store/todos/todos-selectors";
 import { selectCurrentFilter } from "../../store/todos/todos-selectors";
-import { toggleTodo, editTodo, removeTodo, selectTodo } from "../../store/todos/todos-actions";
+import {
+  toggleTodo,
+  removeTodo,
+  selectTodo,
+  toggleTodoPopup,
+  toggleAddPopup,
+  toggleEditPopup,
+} from "../../store/todos/todos-actions";
 
-function Todos({ onAddButtonClick, onTodoClick, onEditButtonClick }) {
+function Todos() {
   const dispatch = useDispatch();
 
   const currentFilter = useSelector(selectCurrentFilter);
@@ -17,21 +24,25 @@ function Todos({ onAddButtonClick, onTodoClick, onEditButtonClick }) {
   );
 
   const handleDeleteTodo = (todo) => {
-    dispatch(removeTodo(todo));
+    dispatch(removeTodo(todo.id));
   };
 
-  const handleEditTodo = (todo) => {
-    onEditButtonClick();
-    dispatch(editTodo(todo));
+  const handleEditButtonClick = (todo) => {
+    dispatch(selectTodo(todo));
+    dispatch(toggleEditPopup(true));
   };
 
   const handleToggleTodo = (todo) => {
     dispatch(toggleTodo(todo));
   };
 
-  const handleSelectTodo = (todo) => {
-    onTodoClick();
+  const handleTodoClick = (todo) => {
     dispatch(selectTodo(todo));
+    dispatch(toggleTodoPopup(true));
+  };
+
+  const handleAddButtonClick = () => {
+    dispatch(toggleAddPopup(true));
   };
 
   return (
@@ -50,8 +61,8 @@ function Todos({ onAddButtonClick, onTodoClick, onEditButtonClick }) {
                 key={todo.id}
                 onDeleteButtonClick={handleDeleteTodo}
                 onToggleClick={handleToggleTodo}
-                onTodoClick={handleSelectTodo}
-                onEditButtonClick={handleEditTodo}
+                onTodoClick={handleTodoClick}
+                onEditButtonClick={handleEditButtonClick}
               />
             ))
           ) : (
@@ -66,7 +77,7 @@ function Todos({ onAddButtonClick, onTodoClick, onEditButtonClick }) {
             </>
           )}
         </section>
-        <button className="main__add-button" onClick={onAddButtonClick}>
+        <button className="main__add-button" onClick={handleAddButtonClick}>
           Добавить
         </button>
       </main>

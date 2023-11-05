@@ -27,17 +27,19 @@ function Todo({
     <article className={`${todo.isCompleted ? "todo_completed" : "todo"}`}>
       <h3
         onClick={handleTodoClick}
-        className={`todo__task ${todo.isCompleted ? "todo__task_completed" : ""}`}
+        className={`todo__task ${
+          todo.isCompleted ? "todo__task_completed" : ""
+        }`}
       >
         {todo.task}
       </h3>
       <button className="todo__delete-button" onClick={handleDeleteClick} />
-      <span className="todo__deadline">
-        До {todo.date} {todo.time}
-      </span>
+      <span className="todo__deadline"></span>
       <p />
       <p
-        className={`${todo.isCompleted ? "todo__description_completed" : "todo__description"}`}
+        className={`${
+          todo.isCompleted ? "todo__description_completed" : "todo__description"
+        }`}
       >
         {todo.description}
       </p>
@@ -59,9 +61,11 @@ function Todo({
             }`}
             onClick={handleToggleClick}
           >
-            {todo.isCompleted ? '' : 'Завершить'}
+            {todo.isCompleted ? "" : "Завершить"}
           </button>
-          {!todo.isCompleted && <button className="todo__edit-button" onClick={handleEditClick} />}
+          {!todo.isCompleted && (
+            <button className="todo__edit-button" onClick={handleEditClick} />
+          )}
         </>
       )}
     </article>

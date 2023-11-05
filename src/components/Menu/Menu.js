@@ -12,8 +12,7 @@ function Menu(props) {
         <div className="menu__container">
           <h1 className="menu__title">Организуйте работу и жизнь.</h1>
           <p className="menu__description">
-            Todoist – список дел, который поможет вам обрести концентрацию,
-            организованность и покой.
+            To-do List – веб-приложение, которое поможет вам структурировать свои задачи, чтобы добиться эффективности.
           </p>
           <Link to="/todos" className="menu__button">
             Начать

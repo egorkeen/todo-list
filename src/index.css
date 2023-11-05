@@ -21,9 +21,6 @@ body {
 /* footer */
 @import url(./components/Footer/Footer.css);
 
-/* possibilities */
-@import url(./components/Possibilities/Possibilities.css);
-
 /* todos */
 @import url(./components/Todos/Todos.css);
 

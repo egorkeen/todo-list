@@ -1,26 +1,34 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectSelectedTodo } from '../../store/todos/todos-selectors';
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectOpenedPopup,
+  selectSelectedTodo,
+} from "../../store/todos/todos-selectors";
+import { toggleTodoPopup } from "../../store/todos/todos-actions";
 
-function TodoPopup(props) {
+function TodoPopup() {
+  const dispatch = useDispatch();
   const selectedTodo = useSelector(selectSelectedTodo);
+  const isOpen = useSelector((state) => selectOpenedPopup(state, "todo-popup"));
+
+  const closeTodoPopup = () => dispatch(toggleTodoPopup(false));
   // закрыть попап при нажатии на esc
   function handleKeyDown(e) {
     if (e.key === "Escape") {
-      props.onClose();
+      closeTodoPopup();
     }
   }
 
   // закрыть попап при клике по попапу
   function handleClickOutside(e) {
     if (e.target.classList.contains("popup")) {
-      props.onClose();
+      closeTodoPopup();
     }
   }
 
   // это необходимо, чтобы удалить/добавить слушатели
   useEffect(() => {
-    if (props.isOpen) {
+    if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("click", handleClickOutside);
     }
@@ -29,18 +37,14 @@ function TodoPopup(props) {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [props.isOpen]);
+  }, [isOpen]);
 
   return (
-    <div className={`popup ${props.isOpen ? "popup_active" : ""}`}>
+    <div className={`popup ${isOpen ? "popup_active" : ""}`}>
       <div className="todo-popup__container">
         <h2 className="todo-popup__task">{selectedTodo?.task}</h2>
-        <span className="todo-popup__deadline">
-          Выполнить до {selectedTodo?.date} {selectedTodo?.time}
-        </span>
-        <p className="todo-popup__description">
-          {selectedTodo?.description}
-        </p>
+        <span className="todo-popup__deadline"></span>
+        <p className="todo-popup__description">{selectedTodo?.description}</p>
       </div>
     </div>
   );

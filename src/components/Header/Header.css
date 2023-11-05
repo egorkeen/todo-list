@@ -29,7 +29,7 @@
 .header__navigation {
   min-width: 324px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 26px;
 }
 

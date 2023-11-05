@@ -26,14 +26,6 @@ function Navigation(props) {
           Главная
         </NavLink>
         <NavLink
-          to="/possibilities"
-          className={({ isActive }) =>
-            isActive ? "header__link_active" : "header__link"
-          }
-        >
-          Возможности
-        </NavLink>
-        <NavLink
           to="/todos"
           className={({ isActive }) =>
             isActive ? "header__link_active" : "header__link"

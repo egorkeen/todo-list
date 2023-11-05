@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Form from "../Form/Form";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectOpenedPopup,
+  selectSelectedTodo,
+} from "../../store/todos/todos-selectors";
+import { editTodo, toggleEditPopup } from "../../store/todos/todos-actions";
 
-function EditPopup({ isOpen, onClose, selectedTodo, onSubmit }) {
-  const [task, setTask] = useState(selectedTodo.task);
-  const [description, setDescription] = useState(selectedTodo.description);
+function EditPopup() {
+  const dispatch = useDispatch();
+  const selectedTodo = useSelector(selectSelectedTodo);
+  const isOpen = useSelector((state) => selectOpenedPopup(state, "edit-popup"));
+  const [task, setTask] = useState("title");
+  const [description, setDescription] = useState("description");
+
+  const closeEditPopup = () => dispatch(toggleEditPopup(false));
 
   const handleTaskChange = (e) => {
     setTask(e.target.value);
@@ -16,24 +27,25 @@ function EditPopup({ isOpen, onClose, selectedTodo, onSubmit }) {
   // закрыть попап при нажатии на esc
   function handleKeyDown(e) {
     if (e.key === "Escape") {
-      onClose();
+      closeEditPopup();
     }
   }
 
   // закрыть попап при клике по попапу
   function handleClickOutside(e) {
     if (e.target.classList.contains("popup")) {
-      onClose();
+      closeEditPopup();
     }
   }
 
   function onEditSubmit(e) {
     e.preventDefault();
-    const newTodo = {
-      task: task,
-      description: description,
-    };
-    onSubmit(newTodo);
+    dispatch(editTodo({
+      ...selectedTodo, 
+      task, 
+      description, 
+    }));
+    closeEditPopup();
   }
 
   // это необходимо, чтобы удалить/добавить слушатели
