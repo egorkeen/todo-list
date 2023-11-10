@@ -59,3 +59,6 @@ body {
 
 /* Filters */
 @import url(./components//Filters/Filters.css);
+
+/* Auth */
+@import url(./components/Auth/Auth.css);

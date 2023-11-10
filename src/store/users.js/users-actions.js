@@ -1,0 +1,1 @@
+export const SET_CURRENT_USER = '@@users/SET_CURRENT_USER';
