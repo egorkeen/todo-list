@@ -3,7 +3,7 @@
 Добро пожаловать в Todo-лист - простой и удобный инструмент для организации и управления вашими задачами. Этот приложение поможет вам организовать свою жизнь, упорядочить задачи и следить за их выполнением.
 
 ## Стек технологий 🔨
-![image](https://github.com/egorkeen/todo-list/assets/112564078/873aee77-e5b4-4639-a490-abb0d2d81398) ![image](https://github.com/egorkeen/todo-list/assets/112564078/2bb9e703-da61-47c6-bb11-ecfa11b0392c) ![image](https://github.com/egorkeen/todo-list/assets/112564078/aa4bab23-dd20-4b24-9693-8bcfb4c56b56)
+![image](https://github.com/egorkeen/todo-list/assets/112564078/873aee77-e5b4-4639-a490-abb0d2d81398) ![image](https://github.com/egorkeen/todo-list/assets/112564078/2bb9e703-da61-47c6-bb11-ecfa11b0392c) ![image](https://github.com/egorkeen/todo-list/assets/112564078/aa4bab23-dd20-4b24-9693-8bcfb4c56b56) <img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white"/>
 
 ## Особенности ✨
 
