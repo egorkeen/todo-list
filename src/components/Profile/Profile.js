@@ -1,12 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectMe } from "../../store/slices/users/users.selectors";
+import { removeCurrentUser } from "../../store/slices/users/users.slice";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import {useNavigate} from "react-router-dom";
 function Profile () {
   const user = useSelector(selectMe);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSignOutClick = () => {
-
+    dispatch(removeCurrentUser());
+    navigate("/auth");
   };
 
   return (

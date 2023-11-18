@@ -18,6 +18,9 @@ body {
 /* footer */
 @import url(./components/Footer/Footer.css);
 
+/* Menu */
+@import url(./components/Menu/Menu.css);
+
 /* todos */
 @import url(./components/Todos/Todos.css);
 

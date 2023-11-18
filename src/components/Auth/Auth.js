@@ -17,11 +17,13 @@ function Auth () {
 
   async function handleAuthClick () {
     const data = await signInWithGoogle();
+    // повышаем качество фотографии, заменив данные о загружаемом размере фото
+    let image = data.user.photoURL.replace("=s96-c", "=s1024-c");
     const user = {
       name: data.user.displayName,
       email: data.user.email,
       token: data.user.accessToken,
-      profileImage: data.user.photoURL,
+      profileImage: image,
       isAuthorized: !!data.user.accessToken,
     };
     dispatch(setCurrentUser(user));

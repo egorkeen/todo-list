@@ -33,6 +33,14 @@ function Navigation() {
         >
           Задачи
         </NavLink>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) =>
+            isActive ? "header__link_active" : "header__link"
+          }
+        >
+          Профиль
+        </NavLink>
       </nav>
 
       <nav onClick={openBurgerMenu} className="header__burger-menu">

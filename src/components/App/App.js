@@ -13,7 +13,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 // css
 import "../../index.css";
 import Profile from "../Profile/Profile";
-import {setCurrentUser} from "../../store/slices/users/users.slice";
+import { setCurrentUser } from "../../store/slices/users/users.slice";
 
 function App() {
   const dispatch = useDispatch();
