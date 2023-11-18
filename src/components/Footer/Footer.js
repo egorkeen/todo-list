@@ -1,4 +1,3 @@
-import React from "react";
 import footer__image from "../../images/footer/footer__image.svg";
 
 function Footer(props) {

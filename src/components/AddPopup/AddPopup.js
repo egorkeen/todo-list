@@ -1,8 +1,13 @@
+// dependencies
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodo, toggleAddPopup } from '../../store/todos/todos-actions';
+// components
 import Form from "../Form/Form";
-import { selectOpenedPopup } from "../../store/todos/todos-selectors";
+// selectors
+import { selectOpenedPopup } from "../../store/slices/popups/popups.selectors";
+// actions
+import { addTodo } from '../../store/slices/todos/todos.slice';
+import { toggleAddPopup } from "../../store/slices/popups/popups.slice";
 
 function AddPopup() {
   const dispatch = useDispatch();

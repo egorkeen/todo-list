@@ -1,6 +1,8 @@
-import { useState } from "react";
+// dependencies
 import { Routes, Route } from "react-router-dom";
-import "../../index.css";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+// components
 import Menu from "../Menu/Menu";
 import Todos from "../Todos/Todos";
 import AddPopup from "../AddPopup/AddPopup";
@@ -8,9 +10,20 @@ import TodoPopup from "../TodoPopup/TodoPopup";
 import EditPopup from "../EditPopup/EditPopup";
 import Auth from "../Auth/Auth";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+// css
+import "../../index.css";
+import Profile from "../Profile/Profile";
+import {setCurrentUser} from "../../store/slices/users/users.slice";
 
 function App() {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const localUserData = localStorage.getItem("me");
+    if (localUserData && JSON.parse(localUserData)) {
+      dispatch(setCurrentUser(JSON.parse(localUserData)));
+    };
+  }, []);
   
   return (
     <>
@@ -19,18 +32,24 @@ function App() {
           path="/" 
           element={
             <ProtectedRoute
-              element={<Menu />}
-              isLoggedIn={isLoggedIn}
+              element={Menu}
             />
           }
         />
         <Route
           path="/todos" 
           element={
-            <ProtectedRoute 
-              element={<Todos />}
-              isLoggedIn={isLoggedIn}
-            />  
+            <ProtectedRoute
+              element={Todos}
+            />
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute
+              element={Profile}
+            />
           }
         />
 

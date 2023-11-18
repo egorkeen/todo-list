@@ -1,19 +1,25 @@
+// dependencies
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+// components
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Todo from "../Todo/Todo";
 import Filters from "../Filters/Filters";
-import { selectVisibleTodos } from "../../store/todos/todos-selectors";
-import { selectCurrentFilter } from "../../store/todos/todos-selectors";
+// selectors
+import { selectVisibleTodos } from "../../store/slices/todos/todos.selectors";
+import { selectCurrentFilter } from "../../store/slices/todos/todos.selectors";
+// actions
 import {
   toggleTodo,
   removeTodo,
   selectTodo,
+} from "../../store/slices/todos/todos.slice";
+import {
   toggleTodoPopup,
   toggleAddPopup,
   toggleEditPopup,
-} from "../../store/todos/todos-actions";
+} from "../../store/slices/popups/popups.slice";
 
 function Todos() {
   const dispatch = useDispatch();

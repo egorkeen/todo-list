@@ -1,5 +1,3 @@
-import React from "react";
-
 function Todo({
   todo,
   onDeleteButtonClick,
@@ -9,19 +7,19 @@ function Todo({
 }) {
   function handleToggleClick() {
     onToggleClick(todo);
-  }
+  };
 
   function handleEditClick() {
     onEditButtonClick(todo);
-  }
+  };
 
   function handleTodoClick() {
     onTodoClick(todo);
-  }
+  };
 
   function handleDeleteClick() {
     onDeleteButtonClick(todo);
-  }
+  };
 
   return (
     <article className={`${todo.isCompleted ? "todo_completed" : "todo"}`}>

@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import menu__image from "../../images/menu/menu__image.png";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import menu__image from "../../images/menu/menu__image.png";
 
-function Menu(props) {
+function Menu() {
   return (
     <>
       <Header />

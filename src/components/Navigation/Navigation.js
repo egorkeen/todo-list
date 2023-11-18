@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavigationPopup from "../NavigationPopup/NavigationPopup";
 import header__burger from "../../images/header/header__burger-image.svg";
 
-function Navigation(props) {
+function Navigation() {
   const [isBurgerMenuActive, setBurgerMenuActive] = useState(false);
 
   function openBurgerMenu() {
     setBurgerMenuActive(true);
-  }
+  };
 
   function closeBurgerMenu() {
     setBurgerMenuActive(false);
-  }
+  };
 
   return (
     <>

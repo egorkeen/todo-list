@@ -1,9 +1,12 @@
+// dependencies
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCurrentFilter } from "../../store/todos/todos-selectors";
-import { setFilter } from "../../store/todos/todos-actions";
+// selectors
+import { selectCurrentFilter } from "../../store/slices/todos/todos.selectors";
+// actions
+import { setFilter } from "../../store/slices/todos/todos.slice";
 
-function Filters(props) {
+function Filters() {
   const dispatch = useDispatch();
   const currentFilter = useSelector(selectCurrentFilter);
 

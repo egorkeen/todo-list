@@ -9,7 +9,6 @@
 .auth__container {
   width: 300px;
   margin: auto;
-  padding: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

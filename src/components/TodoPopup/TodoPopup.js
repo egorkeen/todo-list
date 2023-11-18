@@ -1,10 +1,11 @@
+// dependencies
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectOpenedPopup,
-  selectSelectedTodo,
-} from "../../store/todos/todos-selectors";
-import { toggleTodoPopup } from "../../store/todos/todos-actions";
+// selectors
+import { selectSelectedTodo } from "../../store/slices/todos/todos.selectors";
+import { selectOpenedPopup } from "../../store/slices/popups/popups.selectors";
+// actions
+import { toggleTodoPopup } from "../../store/slices/popups/popups.slice";
 
 function TodoPopup() {
   const dispatch = useDispatch();
@@ -32,7 +33,6 @@ function TodoPopup() {
       document.addEventListener("keydown", handleKeyDown);
       document.addEventListener("click", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleClickOutside);

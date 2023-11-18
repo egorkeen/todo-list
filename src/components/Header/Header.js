@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import header__logo from "../../images/header/header__logo.svg";
