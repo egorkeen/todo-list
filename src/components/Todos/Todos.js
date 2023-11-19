@@ -30,7 +30,7 @@ function Todos() {
   );
 
   const handleDeleteTodo = (todo) => {
-    dispatch(removeTodo(todo.id));
+    dispatch(removeTodo(todo));
   };
 
   const handleEditButtonClick = (todo) => {

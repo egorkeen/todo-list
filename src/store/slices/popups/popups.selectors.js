@@ -1,15 +1,15 @@
 export const selectOpenedPopup = (state, popup) => {
   switch(popup) {
     case 'edit-popup':
-      return state.todos.isEditPopupOpen;
+      return state.popups.isEditPopupOpen;
 
     case 'todo-popup':
-      return state.todos.isTodoPopupOpen;
+      return state.popups.isTodoPopupOpen;
 
     case 'add-popup':
-      return state.todos.isAddPopupOpen;
+      return state.popups.isAddPopupOpen;
 
     default:
-      return state.todos.isTodoPopupOpen;
+      return state.popups.isTodoPopupOpen;
   }
 }

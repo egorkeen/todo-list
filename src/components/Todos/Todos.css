@@ -25,6 +25,7 @@
 
 .main__add-button:hover {
   opacity: .8;
+  cursor: pointer;
 }
 
 .main__title {

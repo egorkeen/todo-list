@@ -13,15 +13,20 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 // css
 import "../../index.css";
 import Profile from "../Profile/Profile";
-import { setCurrentUser } from "../../store/slices/users/users.slice";
+import { loadCurrentUser } from "../../store/slices/users/users.slice";
+import { loadTodos, setFilter } from "../../store/slices/todos/todos.slice";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const localUserData = localStorage.getItem("me");
-    if (localUserData && JSON.parse(localUserData)) {
-      dispatch(setCurrentUser(JSON.parse(localUserData)));
+    const localUser = localStorage.getItem("me");
+    const localTodos = localStorage.getItem("todos");
+    const localFilter = localStorage.getItem("filter");
+    if (localUser && localTodos && localFilter) {
+      dispatch(loadCurrentUser(JSON.parse(localUser)));
+      dispatch(loadTodos(JSON.parse(localTodos)));
+      dispatch(setFilter(JSON.parse(localFilter)));
     };
   }, []);
   

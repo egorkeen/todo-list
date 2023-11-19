@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import localStorage from "redux-persist/es/storage";
 
 const initialState = {
   list: [],
@@ -9,12 +10,19 @@ const initialState = {
 const todosSlice = createSlice({
   name: "@@todos",
   reducers: {
+
+    loadTodos: (state, action) => {
+      state.list = action.payload;
+    },
+
     addTodo: (state, action) => {
       state.list.push(action.payload);
+      localStorage.setItem("todos", JSON.stringify(state.list));
     },
 
     removeTodo: (state, action) => {
-      state.list.filter((todo) => todo.id !== action.payload);
+      state.list = state.list.filter((todo) => todo.id !== action.payload.id);
+      localStorage.setItem("todos", JSON.stringify(state.list));
     },
 
     editTodo: (state, action) => {
@@ -24,6 +32,7 @@ const todosSlice = createSlice({
           : todo
       );
       state.list = updatedTodos;
+      localStorage.setItem("todos", JSON.stringify(state.list));
     },
 
     toggleTodo: (state, action) => {
@@ -33,6 +42,7 @@ const todosSlice = createSlice({
           : todo
       );
       state.list = updatedTodos;
+      localStorage.setItem("todos", JSON.stringify(state.list));
     },
 
     selectTodo: (state, action) => {
@@ -41,12 +51,13 @@ const todosSlice = createSlice({
 
     setFilter: (state, action) => {
       state.currentFilter = action.payload;
+      localStorage.setItem("filter", JSON.stringify(state.currentFilter));
     },
   },
   initialState: initialState,
 });
 
-export const { addTodo, removeTodo, toggleTodo, editTodo, selectTodo, setFilter } = todosSlice.actions;
+export const { loadTodos, addTodo, removeTodo, toggleTodo, editTodo, selectTodo, setFilter } = todosSlice.actions;
 
 export const todosReducer = todosSlice.reducer;
 

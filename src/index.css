@@ -24,6 +24,9 @@ body {
 /* todos */
 @import url(./components/Todos/Todos.css);
 
+/*Filter*/
+@import url(./components/Filters/Filters.css);
+
 @import url(./components/TodoPopup/TodoPopup.css);
 
 /* popup */

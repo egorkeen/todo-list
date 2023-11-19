@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 import {
   getAuth,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  onAuthStateChanged
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -22,4 +23,14 @@ const googleProvider = new GoogleAuthProvider();
 
 export const signInWithGoogle = async () => {
   return signInWithPopup(auth, googleProvider);
+};
+
+export const updateUserProfile = async () => {
+  return onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+      console.log(user);
+    } else {
+    }
+  });
 };
