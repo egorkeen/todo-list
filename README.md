@@ -32,8 +32,8 @@
 
 ## Ссылки
 
-Git-репозиторий - https://github.com/egorkeen/todo-list.git/
+Git-репозиторий - https://github.com/egorkeen/todo-list.git
 
-Ссылка на GitHub Pages - https://egorkeen.github.io/todo-list/
+Ссылка на Vercel - https://todo-list-v8ef.vercel.app
 
 Статус - в доработке ⌛
