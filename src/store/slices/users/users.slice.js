@@ -11,6 +11,7 @@ const usersSlice = createSlice({
     loadCurrentUser: (state, action) => {
       state.me = action.payload;
     },
+
     setCurrentUser: (state, action) => {
       state.me = action.payload;
       localStorage.setItem("me", JSON.stringify(action.payload));

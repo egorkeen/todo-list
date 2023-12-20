@@ -10,6 +10,12 @@ class api {
       return Promise.reject(`${res.status} ${res.statusText}`);
     };
   };
+
+  authWithGoogle () {
+    return fetch("...", {
+    headers: //
+    })
+  };
 };
 
 const expressApi = new api('http://localhost:3001/');
